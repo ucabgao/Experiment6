@@ -1,0 +1,54 @@
+body {
+	max-width: 970px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #333333;
+	font-size: 14px;
+}
+body, div {
+	margin: 0;
+}
+#container h4 {
+	font-size: 18px;
+	line-height: 20px;
+	margin: 10px 0;
+}
+#legend {
+	position: relative;
+	height: 120px;
+	font-size: 13px;
+}
+#legend span {
+	display: inline-block;
+	width: 15px;
+	height: 10px;
+	background-color: #FFF;
+	border: 1px #555555 solid;
+	vertical-align: text-top;
+	margin: 2px;
+	opacity: .8;
+}
+#legend .item {
+	padding: 5px;
+	margin: 10px 0 10px 0;
+	position: absolute;
+	top: 0px;
+	width: 30%;
+}
+.county {
+	fill-opacity: .8;
+}
+.metainfo {
+	color: #777;
+	font-size: 12px;
+}
+h3.tip-title {
+	border-bottom: 1px solid #e1e1e1;
+	margin: 0 0 5px 0;
+	color: #444444;
+}
+.qtip-content {
+	font-size: 13px;
+}
+.qtip-defaults {
+	pointer-events: none; /*this prevents triggering mouseout if tip gets in way of cursor*/
+}

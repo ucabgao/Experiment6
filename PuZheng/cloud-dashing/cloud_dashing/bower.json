@@ -1,0 +1,26 @@
+{
+  "name": "cloud_dashing",
+  "version": "0.1.0",
+  "dependencies": {
+    "bootstrap": "~3.1.0",
+    "fancybox": "latest",
+    "select2": "~3.4.5",
+    "requirejs": "latest",
+    "holderjs": "latest",
+    "normalize-css": "latest",
+    "modernizr": "latest",
+    "html5shiv": "latest",
+    "Font-Awesome": "latest",
+    "handlebars": "latest",
+    "flot": "latest",
+    "flot.tooltip": "latest",
+    "moment": "~2.5.1",
+    "toastr": "~2.0.1",
+    "backbone": "~1.1.0",
+    "underscore": "~1.6.0",
+    "handlebars.js": "~1.3.0",
+    "backgrid": "latest",
+    "text": "~2.0.10",
+    "jquery": "~1.10.2"
+  }
+}

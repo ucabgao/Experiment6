@@ -1,0 +1,37 @@
+﻿<div class="chat-container">
+    <div class="chat-area col-md-10" scroll="messages">
+        <div class="loader" ng-show="loading">
+
+        </div>
+        <message class="message-container" 
+                 ng-repeat="message in messages" 
+                 message-item="message" 
+                 ng-class="{ 'consecutive-msg': consecutiveCheck($index) }"></message>
+    </div>
+    <div class="chat-users col-md-2 hidden-sm hidden-xs">
+        <h3>Users</h3>
+        <user-display ng-repeat="user in onlineUsers" 
+                      user="user" 
+                      display-size="lg" 
+                      hide-name="true"
+                      show-context-menu="showContextMenu"
+                      kick-me="kickUser(u)"></user-display>
+    </div>
+    <div class="chat-message-buffer silver-background col-md-1 hidden-sm hidden-xs"></div>
+    <div class="chat-message silver-background col-md-11 col-sm-12">
+        <textarea class="message-input" ng-model="message"></textarea>
+        <button type="button"
+                class="btn clouds-font carrot-background hover">
+            send
+        </button>
+        <button type="button"
+                class="btn clouds-font"
+                ng-class="{ 'concrete-background' : !messageIsCode, 'carrot-background': messageIsCode }"
+                ng-click="messageIsCode=!messageIsCode">
+            code
+        </button>
+        <i class="fa fa-2x"
+           ng-class="{ 'fa-volume-up': playSound, 'fa-volume-off': !playSound}"
+           ng-click="playSound=!playSound"></i>
+    </div>
+</div>

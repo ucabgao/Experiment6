@@ -1,0 +1,126 @@
+/* @override http://localhost:8081/screening/control-room/ui/script-detail-view.reel/script-detail-view.css */
+
+/* <copyright>
+ This file contains proprietary software owned by Motorola Mobility, Inc.<br/>
+ No rights, expressed or implied, whatsoever to this software are provided by Motorola Mobility, Inc. hereunder.<br/>
+ (c) Copyright 2011 Motorola Mobility, Inc.  All Rights Reserved.
+ </copyright> */
+
+.scriptDetail {
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;    
+}
+
+
+/* Bar */
+
+.scriptDetail .menuBar {
+    border-left: 1px solid hsla(0,0%,0%,.15);
+}
+
+.pauseRecord {
+    display: none;
+}
+
+.versionString {
+    display: block;
+    font-size: 0.8em;
+    font-style: italic;
+    background-color: #333333;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+
+.scriptDetail .content {
+    padding: 0;
+    overflow: auto;
+}
+
+.scriptManager .result {
+    background:#F2F2F2;
+    padding:8px;
+}
+
+/* Header */
+
+.scriptDetail .codeHeader {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    height: 42px;
+    color: hsl(0,0%,60%);
+    background-color: hsl(0, 0%, 90%);
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+    border-left: 1px solid hsl(0, 0%, 80%);
+}
+
+.scriptDetail .codeHeader label {
+    display: block;
+    padding: 0 8px 0 15px;
+    font-size: .9em;
+}
+
+.scriptDetail .codeHeader input {
+    display: block;
+    -webkit-box-flex: 1;
+    margin-right: 20px;
+    padding: 3px 3px 3px 0px;
+    color: #000000;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px dashed hsl(0,0%,75%);
+    font-size: 1.2em;
+    cursor: text;
+}
+
+.scriptDetail .codeHeader input:hover {
+    border-bottom: 1px solid hsl(0,0%,75%);
+}
+
+.scriptDetail .codeHeader input:focus {
+    outline: none;
+    border-bottom: 1px solid hsl(0,0%,40%);
+}
+
+.scriptDetail .codeHeader input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 4px;
+}
+
+
+/* CodeMirror */
+
+.CodeMirror {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    
+    overflow-y: auto;
+    overflow-x: auto;
+    
+    background-color: hsl(0, 0%, 98%);
+    font-size: 1.1em;
+    border-left: 1px solid hsl(0, 0%, 80%);   
+}
+
+
+.CodeMirror-scroll {
+    height: auto !important;
+    width: auto !important;
+    overflow-y: visible !important;
+    overflow-x: visible !important;
+}
+
+
+.link:link {
+    color: #AEAEAE;
+}
+
+.link:visited {
+    color: #AEAEAE;
+}

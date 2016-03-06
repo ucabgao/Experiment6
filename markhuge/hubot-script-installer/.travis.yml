@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- '0.10'
+- '0.11'
+- '0.8'
+matrix:
+  allow_failures:
+  - node_js:
+    - '0.8'
+env:
+  global:
+    secure: c0bb4nNxT7Zu8xvsvTBHdnXKhA49BmExAM9fj/uxWdl1r3te1Bjeq91DYW+rO5dnsof/RB2DR586d4ouxoB+PSmt/M5laDFFhmP4OwRne0CAcq8nnjWgoCmcR0J0gINYy4rMA0ujBtSaKV2hIms1HP3hzKMiI7FGNNpKRyTq5i0=
+deploy:
+  provider: npm
+  email: mark@segfawlt.net
+  api_key:
+    secure: gdu1q02IUguIoqcmY/lYm+whrwK3f1BBYlVNSwn9ja0bYHjWS/cL7/Q8HeazCarjUqvIs1NKi5tLSkJoFKDuNUos0turZ85VGIu8onbuOPY7nJrJMj+ff0DsSmRJxp+UpUFse5+qUyhhvgkrD7yuDLg1dLqfuUdaOr5lDYRl7a0=
+  on:
+    tags: true
+    repo: markhuge/hubot-script-installer

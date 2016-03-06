@@ -1,0 +1,36 @@
+{
+  "name": "eslint-plugin-should-promised",
+  "version": "1.0.6",
+  "description": "Eslint rule for checking that should-promised assertions return",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover _mocha -- --recursive --reporter spec",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  },
+  "peerDependencies": {
+    "eslint": ">=0.8.0"
+  },
+  "devDependencies": {
+    "coveralls": "2.11.6",
+    "eslint": "1.10.3",
+    "is-my-json-valid": "2.12.4",
+    "istanbul": "0.4.2",
+    "mocha": "2.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbrockman/eslint-plugin-should-promised.git"
+  },
+  "author": "David Brockman Smoliansky @dbrckmn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dbrockman/eslint-plugin-should-promised/issues"
+  },
+  "homepage": "https://github.com/dbrockman/eslint-plugin-should-promised",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "should",
+    "promise"
+  ]
+}

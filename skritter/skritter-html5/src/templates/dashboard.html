@@ -1,0 +1,99 @@
+<div class="mobile page page-dashboard">
+
+    <div class="font-preloader">力</div>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-menu toggle">
+                    <div class="toggle-bars fa fa-bars"></div>
+                    <div class="toggle-text navbar-title"></div>
+                </button>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li id="button-sync" class="navbar-item">
+                    <i class="fa fa-refresh navbar-icon"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container content-container padding-top">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="expired-notice" class="content-box">
+                    <h3 class="expired-title text-danger"></h3>
+                    <p class="expired-message lead"></p>
+                    <button id="button-hide-expired" type="button" class="btn btn-sm spacing">Hide</button>
+                    <button id="button-expired" type="button" class="btn btn-sm btn-info navigate spacing" data-url="account">Go to Account</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content-box fixed-150">
+                    <div class="media">
+                        <div class="cursor pull-left navigate user-avatar" data-url="account"></div>
+                        <div class="media-body">
+                            <h3 class="media-heading user-displayname"></h3>
+                            <h5 id="trial-remaining" class="text-warning">Trial Remaining: <span></span></h5>
+                        </div>
+                        <button type="button" class="btn btn-lg btn-primary navigate spacing" data-url="study"><i class="fa fa-pencil"></i> Study</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="content-box fixed-150">
+                    <h3><i class="fa fa-line-chart"></i> Stats
+                        <button type="button" class="btn btn-sm btn-default navigate" data-url="stats">View All &raquo;</button>
+                    </h3>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-3">
+                            <h5 class="text-muted">DUE</h5>
+                            <h3 class="stats-due"></h3>
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <h5 class="text-muted">TIME</h5>
+                            <h3 class="stats-time">0:00</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="try-kana-notice" class="content-box">
+                    <h3 class="try-kana-title">Kana Writing Support <small>BETA</small></h3>
+                    <p class="lead">
+                        <span class="try-kana-message">Start writing words as they exist in their entirety with kanji and kana together at last.</span>
+                    </p>
+                    <button id="button-hide-try-kana" type="button" class="btn spacing">Hide</button>
+                    <button id="button-try-kana" type="button" class="btn btn-info spacing">
+                        <i class="fa fa-check"></i> Enable
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="rate-notice" class="content-box">
+                    <h3 class="rate-title"></h3>
+                    <p class="lead">
+                        <span class="rate-message"></span>
+                        <span class="rate-thankyou asian-font"></span>
+                    </p>
+                    <button id="button-hide-rate" type="button" class="btn spacing">Hide</button>
+                    <button id="button-rate" type="button" class="btn btn-info spacing">
+                        <i class="fa fa-check"></i> Rate us!
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

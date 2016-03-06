@@ -1,0 +1,51 @@
+.container {
+  background: white;
+  height: 2.5rem;
+  padding: 0 0.5em;
+}
+
+/* Reusable for child components */
+.title-bar-container {
+  display: flex;
+}
+
+.title-bar-header {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+}
+
+.title-bar-item {
+  composes: fa from global;
+  composes: title-bar-header;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: default;
+  margin: 0 0.5em;
+}
+
+.title-bar-position {
+  flex: 1;
+}
+
+.title-bar-left {
+  text-align: left;
+  composes: title-bar-position;
+}
+.title-bar-center {
+  text-align: center;
+  composes: title-bar-position;
+}
+.title-bar-right {
+  text-align: right;
+  composes: title-bar-position;
+}
+
+.title-bar-item-paused {
+  composes: title-bar-item;
+  composes: paused from './Status.module.css';
+}
+
+.title-bar-item-running {
+  composes: title-bar-item;
+  composes: running from './Status.module.css';
+}

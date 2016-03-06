@@ -1,0 +1,11 @@
+﻿<div class="row">
+    <div class="col-xs-1 message-user">
+        <user-display user="messageItem.Sender" display-size="sm" ng-hide="messageItem.isConsecutive"></user-display>
+    </div>
+    <div class="col-xs-11 chat-message" ng-class="{ 'consecutive-msg': messageItem.isConsecutive, 'mine': isMyMessage }" ng-mouseover="hovering = true" ng-mouseleave="hovering = false">
+        <code ng-bind="messageItem.Content" ng-if="messageItem.IsCode"></code>
+        <span ng-bind="messageItem.Content" ng-if="!messageItem.IsCode"></span>
+        <div class="chat-message-time" ng-bind="messageItem.Sent" ng-show="hovering"></div>
+    </div>
+    <div class="clearfix"></div>
+</div>

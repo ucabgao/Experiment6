@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<base target="_parent"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Property Tax</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	function detectSVG(){
+		if (Modernizr.svg){
+			document.getElementById("svgCounties").style.display = "block";
+			document.getElementById("countiesPNG").style.display = "none";
+		} else {
+			document.getElementById("countiesPNG").style.display = "block";
+			document.getElementById("svgCounties").style.display = "none";
+			$("#countiesPNG").append("<img src='http://alt.coxnewsweb.com/ajc/_projects_and_planning_group/projects/PropertyTax/2012/proptax2012.png' />");
+		}
+	}
+	</script>
+</head>
+<body onload="detectSVG()">
+<!--[if lte IE 8]>
+<div id="countiesPNG" style="display:block;"><div style="margin:15px 0px 0px 0px;font-family:'Arial'; color:#777;font-size:12px;">Your browser is out of date. Please upgrade your browser to the latest version to view this graphic interactively.</div></div>
+<style type="text/css">
+	#svgCounties {display:none;} 
+	#CountiesLegend {display:none;}
+</style>
+<![endif]-->
+<div id="container">
+	<div id="legend">
+		<div class="item" style="left:0px;">
+			<span style="background-color:#CB372D;"></span>
+			<strong>Taxes too high:</strong> ZIP codes where property tax appraisals were more than 3% above sale prices, meaning your taxes are too high.
+		</div>
+		<div class="item" style="left:32%">
+			<span style="background-color:#F4C556;"></span>
+			<strong>Taxes about right:</strong> ZIP codes where property tax appraisals were 3% below to 3% percent above sales prices, meaning your taxes are about right.
+		</div>
+		<div class="item" style="left:64%">
+			<span style="background-color:#463770;"></span>
+			<strong>A break on taxes:</strong> ZIP codes where property tax appraisals were more than 3% below sales prices, meaning you are getting a deal on your taxes.
+		</div>
+	</div>
+	<div id="svgCounties">
+		<div id="map"></div>
+		<div><span class="metainfo">*Median price and number of sales based on first quarter 2013</span></div>
+	</div>
+	<div>
+		<h4>About the data</h4>
+		<p>The AJC compared sale prices of residential properties that sold in the first three months of 2013 to their 2013 county values, using fair-market individual-to-individual sales, bank sales of foreclosed properties and other sales considered valid under state law. We eliminated outliers using standards set by the International Association of Assessing Officers.</p>
+	</div>
+	<!--<img src="CountiesLegend.png" style="position:absolute; left:470px; top:280px" />-->
+</div>
+<script src="http://alt.coxnewsweb.com/ajc/_projects_and_planning_group/iFrame/elections/2012/Nov6/gacountiesresultsmap/modernizr.custom.16715.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://alt.coxnewsweb.com/ajc/_projects_and_planning_group/iFrame/elections/2012/Nov6/gacountiesresultsmap/jquery.qtip-1.0.0-rc3.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-28102445-3']);
+_gaq.push(['_trackPageview']);
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+</html>

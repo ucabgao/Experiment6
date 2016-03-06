@@ -1,0 +1,207 @@
+﻿.turquoise-background {
+  background: #1ABC9C;
+}
+.green-sea-background {
+  background: #16A085;
+}
+.emerald-background {
+  background: #2ECC71;
+}
+.nephritis-background {
+  background: #27AE60;
+}
+.peter-river-background {
+  background: #3498DB;
+}
+.belize-hole-background {
+  background: #2980B9;
+}
+.amethyst-background {
+  background: #9B59B6;
+}
+.wisteria-background {
+  background: #8E44AD;
+}
+.wet-asphalt-background {
+  background: #34495E;
+}
+.midnight-blue-background {
+  background: #2C3E50;
+}
+.sun-flower-background {
+  background: #F1C40F;
+}
+.orange-background {
+  background: #F39C12;
+}
+.carrot-background {
+  background: #E67E22;
+}
+.pumpkin-background {
+  background: #D35400;
+}
+.alizarin-background {
+  background: #E74C3C;
+}
+.pomegranate-background {
+  background: #C0392B;
+}
+.clouds-background {
+  background: #ECF0F1;
+  color: #bdc3c7;
+}
+.silver-background {
+  background: #BDC3C7;
+}
+.concrete-background {
+  background: #95A5A6;
+}
+.asbestos-background {
+  background: #7F8C8D;
+}
+
+.turquoise-background.hover:hover {
+  background: #1dd2af;
+}
+.green-sea-background.hover:hover {
+  background: #19b698;
+}
+.emerald-background.hover:hover {
+  background: #40d47e;
+}
+.nephritis-background.hover:hover {
+  background: #2cc36b;
+}
+.peter-river-background.hover:hover {
+  background: #4aa3df;
+}
+.belize-hole-background.hover:hover {
+  background: #2e8ece;
+}
+.amethyst-background.hover:hover {
+  background: #a66bbe;
+}
+.wisteria-background.hover:hover {
+  background: #9b50ba;
+}
+.wet-asphalt-background.hover:hover {
+  background: #3d566e;
+}
+.midnight-blue-background.hover:hover {
+  background: #354b60;
+}
+.sun-flower-background.hover:hover {
+  background: #f2ca27;
+}
+.orange-background.hover:hover {
+  background: #f4a62a;
+}
+.carrot-background.hover:hover {
+  background: #e98b39;
+}
+.pumpkin-background.hover:hover {
+  background: #ec5e00;
+}
+.alizarin-background.hover:hover {
+  background: #ea6153;
+}
+.pomegranate-background.hover:hover {
+  background: #d14233;
+}
+.clouds-background.hover:hover {
+  background: #fbfcfc;
+  color: #bdc3c7;
+}
+.silver-background.hover:hover {
+  background: #cbd0d3;
+}
+.concrete-background.hover:hover {
+  background: #a3b1b2;
+}
+.asbestos-background.hover:hover {
+  background: #8c9899;
+}
+
+.turquoise-font {
+  color: #1ABC9C;
+}
+.green-sea-font {
+  color: #16A085;
+}
+.emerald-font {
+  color: #2ECC71;
+}
+.nephritis-font {
+  color: #27AE60;
+}
+.peter-river-font {
+  color: #3498DB;
+}
+.belize-hole-font {
+  color: #2980B9;
+}
+.amethyst-font {
+  color: #9B59B6;
+}
+.wisteria-font {
+  color: #8E44AD;
+}
+.wet-asphalt-font {
+  color: #34495E;
+}
+.midnight-blue-font {
+  color: #2C3E50;
+}
+.sun-flower-font {
+  color: #F1C40F;
+}
+.orange-font {
+  color: #F39C12;
+}
+.carrot-font {
+  color: #E67E22;
+}
+.pumpkin-font {
+  color: #D35400;
+}
+.alizarin-font {
+  color: #E74C3C;
+}
+.pomegranate-font {
+  color: #C0392B;
+}
+.clouds-font {
+  color: #ECF0F1;
+}
+.silver-font {
+  color: #BDC3C7;
+}
+.concrete-font {
+  color: #95A5A6;
+}
+.asbestos-font {
+  color: #7F8C8D;
+}
+
+.fa.fa-facebook-f,
+.fa.fa-facebook-official {
+    color: #3b5998
+}
+.fa.fa-github {
+    color: #999999;
+}
+.fa.fa-google-plus {
+    color: #dd4b39;
+}
+.fa.fa-linkedin {
+    color: #0976b4;
+}
+.fa.fa-twitter {
+    color: #55acee;
+}
+.fa.fa-windows {
+    color: #00bcf2;
+}
+.fa.fa-wordpress {
+    color: #21759b;
+}

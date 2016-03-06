@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="Roulette">
+  <head>
+    <meta charset="utf-8">
+    <title>Ear Roulette</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./scripts/angular.js"></script>
+    <script src="./js/roulette.js"></script>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"></link>
+  </head>
+
+  <body ng-controller="RouletteController as roulette">
+
+    <h1>Ear Roulette</h1>
+
+    <section ng-hide="roulette.loggedIn" id="login-form">
+      <label>Name</label>
+      <input type="type" id="login-name" ng-model="roulette.login_name"></input>
+      <br>
+      <label>Password</label>
+      <input type="password" id="login-password" ng-model="roulette.login_password"></input>
+      <br>
+      <input type="submit" value="Login" id="login" ng-click="roulette.login()"></input>
+      <br><br>
+
+      <label>Name</label>
+      <input type="type" id="signup-name" ng-model="roulette.signup_name"></input>
+      <br>
+      <label>Password</label>
+      <input type="password" id="signup-password" ng-model="roulette.signup_password"></input>
+      <br>
+      <input type="submit" value="Sign up" id="signup" ng-click="roulette.signup()"></input>
+    </section>
+
+    <section ng-show="roulette.loggedIn" id="player">
+      <button id="logout" ng-click="roulette.logout()">Logout</button>
+      <br>
+      <p ng-show="roulette.currentlyPlaying">Playing song...</p>
+      <p ng-show="!roulette.currentlyPlaying">Paused song...</p>
+
+      <div class="track-information">
+        <p id="player-title" ng-bind="roulette.currentSong['title']"></p>
+        <p id="player-artist" ng-bind="roulette.currentSong['artist']"></p>
+        <div id="album-img" ng-show="roulette.currentlyPlaying">
+          <img src="{{ roulette.currentSong['image'] }}"></img>
+        </div>
+
+        <button ng-click="roulette.playSong()"> {{ roulette.buttonName() }} </button>
+        <button ng-click="roulette.likeSong()">Like</button>
+      </div>
+
+      <div class="favorite-songs">
+        <ul>
+          <li ng-repeat="track in roulette.likedSongs">
+            {{ track.title }} | {{ track.artist }}
+            <button ng-click="roulette.deleteSong($index)">Delete</button>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

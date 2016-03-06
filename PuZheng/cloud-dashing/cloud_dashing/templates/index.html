@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block head_block %}
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script src="{{ url_for('static', filename='components/jquery/jquery.min.js') }}"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script>
+    $(function () {
+      $("#modal").on("show.bs.modal", function () {
+        $("#copy-input").val($("<iframe></iframe>").attr("src", location.origin + $("iframe").attr("src"))[0].outerHTML);
+      });
+    });
+  </script>
+{% endblock %}
+
+{% block main %}
+  <button id="embed-link" class="btn btn-default pull-right" data-toggle="modal" data-target="#modal" type="button">
+    嵌入
+  </button>
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">复制</h4>
+        </div>
+        <div class="modal-body">
+          <p>将下面内容复制到您的网页中</p>
+
+            <input type="text" class="form-control" id="copy-input"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <iframe id="main" src="/cloud-dashing" width="100%" height="1000" style="border: 0 solid #000000;"></iframe>
+  <footer class="footer visible-md visible-lg">
+    <div class="container">
+      <div class="text-muted">
+        copyright@公有云监控
+      </div>
+    </div>
+  </footer>
+{% endblock %}
+

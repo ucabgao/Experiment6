@@ -1,0 +1,84 @@
+.stat, .map {
+    height: 360px;
+}
+
+.fa-eye {
+    color: blue;
+}
+
+.fa-smile-o {
+    color: green;
+}
+
+.fa-frown-o {
+    color: brown;
+}
+
+.fa-warning {
+    color: orange;
+}
+
+.fa-ban {
+    color: red;
+}
+
+.fa-question {
+    color: gray;
+}
+
+.fa-spin {
+    color: white;
+}
+
+.timeline-plot {
+    width: 90%;
+    height: 220px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+
+#currentTime {
+    background: #fff;
+    z-index: 100;
+    padding: 0.4em 0.6em;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    border: 1px solid #111;
+    display: none;
+    white-space: nowrap;
+    position: absolute;
+}
+
+.yaxisLabel {
+	top: 50%;
+	left: 2px;
+    font-size: 50%;
+	transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-webkit-transform:  rotate(-90deg);
+	transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+}
+
+.legendLabel {
+    color: black;
+}
+
+.daily-avg-latency-bar {
+    width: 960px;
+    height: 220px;
+}
+
+.string-cell {
+    text-align: center !important;
+}
+
+.hd-score, .cpu-score, .avg-latency {
+    /*width: 90%;*/
+    height: 300px;
+}

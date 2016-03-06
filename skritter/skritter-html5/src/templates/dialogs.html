@@ -1,0 +1,314 @@
+<!-- DIALOGS: Default -->
+<div class="dialog-default modal fade" tabindex="-1" role="dialog" aria-labelledby="default" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img class="loader-image" src="images/ajax-loader.gif" height="64" width="64">
+                <h3 class="message-title"></h3>
+                <h5 class="message-text"></h5>
+                <div class="message-confirm"></div>
+                <div class="message-close"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: Add Items -->
+<div class="dialog-add-items modal fade" tabindex="-1" role="dialog" aria-labelledby="add-items" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <h3 class="message-title"></h3>
+                <h5 class="message-text"></h5>
+                <img class="loader-image" src="images/ajax-loader.gif" height="64" width="64">
+                <div class="item-limit">
+                    <button type="button" data-value="1" class="btn btn-primary spacing">1</button>
+                    <button type="button" data-value="5" class="btn btn-primary spacing">5</button>
+                    <button type="button" data-value="10" class="btn btn-primary spacing">10</button>
+                    <button type="button" data-value="20" class="btn btn-primary spacing">20</button>
+                </div>
+                <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Cancel</button>
+                <div class="message-confirm"></div>
+                <div class="message-close"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: Add Vocab -->
+<div class="dialog-add-vocab modal fade" tabindex="-1" role="dialog" aria-labelledby="add-vocab" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-search"></i> <span></span></h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <h5 class="message-text"></h5>
+                    <input type="text" class="form-control vocabs" placeholder="">
+                </div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="check btn btn-success pull-right">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: Confirm -->
+<div class="dialog-confirm modal fade" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="modal-icon"></i> <span></span></h3>
+            </div>
+            <div class="modal-body">
+                <p class="modal-message"></p>
+                <button type="button" class="btn btn-default" data-dismiss="modal">No, go back!</button>
+                <button type="button" class="confirm btn btn-danger pull-right">Yes, do it.</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: Edit Text -->
+<div class="dialog-edit-text modal fade" tabindex="-1" role="dialog" aria-labelledby="edit-text" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-edit"></i> <span></span></h3>
+            </div>
+            <div class="modal-body">
+                <textarea class="dialog-value"></textarea>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="save btn btn-success pull-right">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: Exit -->
+<div class="dialog-exit modal fade" tabindex="-1" role="dialog" aria-labelledby="logout" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-power-off"></i> Exit?</h3>
+            </div>
+            <div class="modal-body">
+                <div class="text-center"><img class="loader-image" src="images/ajax-loader.gif" height="64" width="64"></div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">No, go back!</button>
+                <button type="button" class="exit btn btn-danger pull-right">Yes, do it.</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: List Add -->
+<div class="dialog-list-add modal fade" tabindex="-1" role="dialog" aria-labelledby="list-add" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-edit"></i> <span></span></h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="list-name" placeholder="What should the list be called?">
+                </div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="list-add btn btn-success pull-right"><i class="fa fa-plus"></i> Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: List Add Section -->
+<div class="dialog-list-add-section modal fade" tabindex="-1" role="dialog" aria-labelledby="list-add-section" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-edit"></i> <span></span></h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="section-name" placeholder="What is the section name?">
+                </div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="section-add btn btn-success pull-right"><i class="fa fa-plus"></i> Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: List Confirmation -->
+<div class="dialog-list-confirmation modal fade" tabindex="-1" role="dialog" aria-labelledby="list-confirmation" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="list-image pull-left"></div>
+                            <div class="media-body">
+                                <h3 class="list-name media-heading"></h3>
+                            </div>
+                        </li>
+                    </ul>
+                </h3>
+            </div>
+            <div class="modal-body">
+                <p class="list-description"></p>
+                <p><strong>Categories:</strong> <span class="list-categories"></span></p>
+                <p><strong>People Studying:</strong> <span class="list-studying"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="select btn btn-success">Select &raquo;</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: List Select -->
+<div class="dialog-list-select modal fade" tabindex="-1" role="dialog" aria-labelledby="list-select" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-th"></i> <span></span></h3>
+            </div>
+            <div class="modal-body">
+                <div class="list-container"></div>
+                <div class="text-center">
+                    <img class="loader-image" src="images/ajax-loader.gif" height="64" width="64">
+                </div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="select-list btn btn-success pull-right"><i class="fa fa-check"></i> Select</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: Logout -->
+<div class="dialog-logout modal fade" tabindex="-1" role="dialog" aria-labelledby="logout" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-sign-out"></i> Log out?</h3>
+            </div>
+            <div class="modal-body">
+                <div class="text-center"><img class="loader-image" src="images/ajax-loader.gif" height="64" width="64"></div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">No, go back!</button>
+                <button type="button" class="logout btn btn-danger pull-right">Yes, do it.</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: Tutorial (Rdng) -->
+<div class="dialog-tutorial-defn modal fade" tabindex="-1" role="dialog" aria-labelledby="tutorial-rune" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-graduation-cap"></i> <span>Definition Prompts</span></h3>
+            </div>
+            <div class="modal-body">
+                <div class="tutorial-text">
+                    <p>Think or say the meaning, then tap anywhere to check your answer.</p>
+                </div>
+                <button type="button" class="tutorial-cancel btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="tutorial-disable btn btn-sm btn-info pull-right">Don't show again.</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: Tutorial (Grading) -->
+<div class="dialog-tutorial-grading modal fade" tabindex="-1" role="dialog" aria-labelledby="tutorial-grading" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-graduation-cap"></i> <span>Grading Buttons</span></h3>
+            </div>
+            <div class="modal-body">
+                <div class="tutorial-text">
+                    <p>Did you get the prompt correct? Grade yourself so Skritter knows when you should review it again.</p>
+                    <ul>
+                        <li>Tap anywhere on the canvas to accept the grade and move to the next prompt.</li>
+                        <li>Tap a different button to alter the grade. Tap once more to confirm your new grade and move to the next prompt.</li>
+                    </ul>
+                </div>
+                <button type="button" class="tutorial-cancel btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="tutorial-disable btn btn-sm btn-info pull-right">Don't show again.</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: Tutorial (Rdng) -->
+<div class="dialog-tutorial-rdng modal fade" tabindex="-1" role="dialog" aria-labelledby="tutorial-rune" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-graduation-cap"></i> <span>Reading Prompts</span></h3>
+            </div>
+            <div class="modal-body">
+                <div class="tutorial-text">
+                    <p>Reading prompts ask you for the pronunciation. Think or say the answer, then tap anywhere to check.</p>
+                </div>
+                <button type="button" class="tutorial-cancel btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="tutorial-disable btn btn-sm btn-info pull-right">Don't show again.</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: Tutorial (Rune) -->
+<div class="dialog-tutorial-rune modal fade" tabindex="-1" role="dialog" aria-labelledby="tutorial-rune" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-graduation-cap"></i> <span>Writing Prompts</span></h3>
+            </div>
+            <div class="modal-body">
+                <div class="tutorial-text">
+                    <p>Welcome to your first writing prompt! Do you know how to write the character for <strong class="tutorial-reading"></strong>?
+                        Try and write it from memory!</p>
+                    <ul>
+                        <li>Tap <i class="fa fa-1x5 fa-magic"></i> and learn the correct stroke order.</li>
+                        <li>Tap <i class="fa fa-1x5 fa-eye"></i> to reveal the entire character. Careful though, tapping the button will mark this prompt as wrong.</li>
+                        <li>Tap <i class="fa fa-1x5 fa-eraser"></i> to start over and write the character again. </li>
+                    </ul>
+                </div>
+                <button type="button" class="tutorial-cancel btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="tutorial-disable btn btn-sm btn-info pull-right">Don't show again.</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DIALOGS: Tutorial (Tone) -->
+<div class="dialog-tutorial-tone modal fade" tabindex="-1" role="dialog" aria-labelledby="tutorial-rune" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"><i class="fa fa-graduation-cap"></i> <span>Tone Prompts</span></h3>
+            </div>
+            <div class="modal-body">
+                <div class="tutorial-text">
+                    <p>
+                        What is/are the tones for <strong class="tutorial-writing"></strong>
+                        Draw the contour for the tone directly on your screen!
+                        Here are possible tone patterns:
+                    </p>
+                    <ul>
+                        <li>1st: Draw a horizontal line.</li>
+                        <li>2nd: Draw a line from the bottom-left to top-right.</li>
+                        <li>3rd: Draw a "v" shape. </li>
+                        <li>4th: Draw a line top-left to bottom-right</li>
+                        <li>Neutral: Just tap the screen.</li>
+                    </ul>
+                </div>
+                <button type="button" class="tutorial-cancel btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="tutorial-disable btn btn-sm btn-info pull-right">Don't show again.</button>
+            </div>
+        </div>
+    </div>
+</div>

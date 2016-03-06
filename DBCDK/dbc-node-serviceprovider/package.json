@@ -1,0 +1,54 @@
+{
+  "name": "dbc-node-serviceprovider",
+  "version": "3.0.7",
+  "description": "Provider for the Node modules that accesesthe DBC webservices",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/DBCDK/dbc-node-serviceprovider/tree/master#readme",
+  "scripts": {
+    "build": "npm run cleardest && babel ./src -d dist --ignore __tests__",
+    "cleardest": "rm -rf ./dist",
+    "lint": "eslint ./src",
+    "lint:checkstyle": "eslint ./src  -o report.xml -f checkstyle",
+    "reinstall": "rm -r node_modules && npm install",
+    "test": "mocha --compilers js:babel/register src/**/__tests__/*.test.js  -R mocha-jenkins-reporter",
+    "test:junit": "npm run test",
+    "test:watch": "mocha --compilers js:babel/register src/**/__tests__/*.test.js -w",
+    "watch": "npm run cleardest && babel ./src --watch -d dist --ignore __tests__ --retain-lines",
+    "cover": "istanbul cover _mocha --report lcovonly --report cobertura --report html -- --compilers js:babel/register src/**/__tests__/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DBCDK/dbc-node-serviceprovider.git#master"
+  },
+  "bugs": {
+    "url": "https://github.com/DBCDK/dbc-node-serviceprovider/issues"
+  },
+  "keywords": [
+    "dbc",
+    "webservice",
+    "provider",
+    "ws"
+  ],
+  "author": "dbcdk",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "cache-manager": "^1.0.0",
+    "lodash": "^3.10.1",
+    "sinon": "^1.16.1",
+    "walk": "^2.3.9",
+    "xmldom": "^0.1.19",
+    "xpath": "0.0.9"
+  },
+  "devDependencies": {
+    "babel": "^5.5.6",
+    "babel-eslint": "^4.0.5",
+    "chai": "^3.0.0",
+    "coveralls": "^2.11.4",
+    "eslint": "^1.0.0",
+    "istanbul": "^0.3.22",
+    "mocha": "^2.2.5",
+    "mocha-jenkins-reporter": "^0.1.9",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.9.10"
+  }
+}

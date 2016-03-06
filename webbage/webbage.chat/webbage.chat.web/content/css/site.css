@@ -1,0 +1,220 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+.zocial-reddit {
+
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    background: #f7f7f7;
+    font-family: 'Open Sans';
+    padding-top: 30px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.navbar {
+    min-height: 30px;
+    height: 30px;
+    background: #555;
+    font-size: 16px;
+    color: #f7f7f7;
+    z-index: 9999;
+}
+    .navbar span {
+        padding: 5px 5px;
+        line-height: 20px;
+        display: inline-block;
+    }
+    .navbar .navbar-header a {
+        padding: 5px 15px;
+        font-size: 16px;
+    }
+        .navbar .navbar-header a span {
+            padding: 0;
+        }
+
+.right-menu {    
+    margin-right: 10px;
+    float: right !important;
+}
+    .right-menu div.user-profile {
+        padding: 0 15px;
+        margin-right: 90px;
+        float: left;
+    }
+        .right-menu div.user-profile > img {
+            margin-top: -4px;
+            height: 25px;
+            width: 25px;
+            border-radius: 10px;        
+        }
+    .right-menu div.user-profile:hover,
+    .right-menu span.logout:hover,
+    .right-menu span.login:hover {
+        background: #333;
+        cursor: pointer;
+    }
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:rgba(0,0,0,0.5);
+    z-index: 9998;
+}
+#view {
+    height:100%;
+    width:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    padding-top: 30px;
+}
+#login-background {
+    position: absolute;
+    padding-top: 30px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url(/content/img/background.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+#login-prompt {
+    position: relative;
+    top: 30%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 9999;
+}
+    #login-prompt > .social {
+        margin-top: 120px;
+    }
+        #login-prompt > .social > span.fa {
+            margin: 12px;
+        }
+
+.room-display {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #c7c7c7;
+    cursor: pointer;
+
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
+}
+    .room-display:hover {
+        background: #e7e7e7;
+        border-style: dashed;
+
+        -webkit-transition-duration: 300ms;
+        -moz-transition-duration: 300ms;
+        -o-transition-duration: 300ms;
+        transition-duration: 300ms;
+    }
+    .room-display .rooms-users {
+        float: right;
+    }
+
+.user-display {
+    position: relative;
+}
+.user-display span {
+    display: inline-block;
+
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.user-display.xs {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+    .user-display.xs img {
+        height: 19px;
+        width: 19px;
+    }
+    .user-display.xs span {
+        display: none;
+    }
+
+.user-display.sm {
+    width: 100%;
+    margin-top: 5px;
+    text-align: right;
+}
+    .user-display.sm img {
+        height: 19px;
+        width: 19px;
+        float: right !important;
+    }
+    .user-display.sm span {
+        font-size: 0.89em;
+        font-style: italic;
+        margin-right: 10px;
+        max-width: 55px;
+    }
+
+.user-display.lg {
+    margin: 3px;
+}
+    .user-display.lg img {
+        height: 50px;
+        width: 50px;
+    }
+    .user-display.lg span {
+        font-size: 1.4em;
+        clear: both;
+    }
+
+.user-display .user-context-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    padding: 0;
+    width: 150%;
+}
+    .user-display:hover .user-context-menu {
+        display: block;
+    }
+    .user-display .user-context-menu li {
+        padding: 2px;
+        border: 1px solid #333;
+        background: #999;
+        color: #ecf0f1;
+        width: 100%;
+        cursor: pointer;
+    }
+        .user-display .user-context-menu li:hover {
+            background: #888;
+        }
+
+@media only screen and (max-width: 1462px) {
+    body .user-display.sm span {
+        max-width: 40px;
+    }
+}
+
+@media only screen and (max-width: 1246px) {
+    body .user-display.sm span {
+        display: none;
+    }
+}

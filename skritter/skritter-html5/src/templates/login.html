@@ -1,0 +1,39 @@
+<div class="mobile no-navbar page page-login">
+
+    <div class="container">
+
+        <h1 class="text-center">
+            <i class="cursor fa fa-arrow-circle-left navigate pull-left" data-url="#"></i>
+            {{login.title}}
+        </h1>
+
+        <p class="text-center text-muted">{{login.message}}</p>
+
+        <hr>
+
+        <form class="login-form" role="form">
+
+            <h4 id="message" class="text-danger"></h4>
+
+            <fieldset>
+
+                <div class="form-group">
+                    <h4>{{login.username}}:</h4>
+                    <input type="text" name="login-username" id="login-username" class="form-control input-lg" value="">
+                    <h4>{{login.password}}:</h4>
+                    <input type="password" name="login-password" id="login-password" class="form-control input-lg" value="">
+                </div>
+
+                <button id="button-login" class="btn btn-lg btn-success btn-block">{{login.title}} &raquo;</button>
+
+                <hr>
+
+                <button id="button-new" class="btn btn-lg btn-default btn-block navigate" data-url="getting-started">{{login.new-user}}</button>
+
+            </fieldset>
+
+        </form>
+
+    </div>
+
+</div>

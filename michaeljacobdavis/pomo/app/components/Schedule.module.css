@@ -1,0 +1,19 @@
+.event {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  line-height: 1.2em;
+  padding: 0.2em 0;
+  margin: 0 25vw;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.current {
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  composes: event;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+}

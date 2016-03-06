@@ -1,0 +1,67 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.timer {
+  font-size: 2.5rem;
+  letter-spacing: -.025em;
+  color: white;
+  font-weight: 100;
+  text-align: center;
+}
+
+.schedule {
+  text-align: center;
+}
+
+.container-paused {
+  composes: container;
+  composes: paused from './Status.module.css';
+}
+
+.container-running {
+  composes: container;
+  composes: running from './Status.module.css';
+}
+
+.title-bar-play {
+  composes: fa-play from global;
+  composes: title-bar-item-paused from './TitleBar.module.css';
+}
+.title-bar-pause {
+  composes: fa-pause from global;
+  composes: title-bar-item-running from './TitleBar.module.css';
+}
+
+.title-bar-settings {
+  composes: fa-cog from global;
+  margin-left: auto;
+  text-align: right;
+}
+
+.title-bar-settings-running {
+  composes: title-bar-settings;
+  composes: title-bar-item-running from './TitleBar.module.css';
+}
+
+.title-bar-settings-paused {
+  composes: title-bar-settings;
+  composes: title-bar-item-paused from './TitleBar.module.css';
+}
+
+.title-bar-reset {
+  composes: fa-history from global;
+  margin-left: auto;
+  text-align: right;
+}
+
+.title-bar-reset-running {
+  composes: title-bar-reset;
+  composes: title-bar-item-running from './TitleBar.module.css';
+}
+
+.title-bar-reset-paused {
+  composes: title-bar-reset;
+  composes: title-bar-item-paused from './TitleBar.module.css';
+}

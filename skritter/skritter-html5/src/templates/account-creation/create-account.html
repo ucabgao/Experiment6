@@ -1,0 +1,33 @@
+<div class="mobile no-navbar page page-create-account">
+
+    <div class="container">
+
+        <h1 class="text-center">
+            <i class="cursor fa fa-arrow-circle-left navigate pull-left" data-url="#"></i>
+            {{account-creation.create-account.title}}
+        </h1>
+
+        <p class="text-center text-muted">{{account-creation.create-account.message}}</p>
+
+        <hr>
+
+        <form class="create-account-form" role="form">
+            <h4 id="message" class="text-danger"></h4>
+            <fieldset>
+                <div class="form-group">
+                    <h4>{{account-creation.create-account.email}}:</h4>
+                    <input type="email" name="create-account-email" id="create-account-email" class="form-control input-lg" value="">
+                    <h4>{{account-creation.create-account.username}}:</h4>
+                    <input type="text" name="create-account-username" id="create-account-username" class="form-control input-lg" value="">
+                    <h4>{{account-creation.create-account.password}}:</h4>
+                    <input type="password" name=create-account-password" id="create-account-password" class="form-control input-lg" value="">
+                </div>
+                <button id="button-create" class="btn btn-lg btn-block btn-success vertical-margin">{{global.create}} &raquo;</button>
+                <!--<hr>
+                <button id="button-skip" class="btn btn-lg btn-block btn-default vertical-margin" disabled>{{global.skip}}</button>-->
+            </fieldset>
+        </form>
+
+    </div>
+
+</div>

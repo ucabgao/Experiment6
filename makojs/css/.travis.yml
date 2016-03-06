@@ -1,0 +1,18 @@
+sudo: false
+language: node_js
+node_js:
+- stable
+- 4
+install: npm update
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: npm
+  email: dominic@dbarnes.info
+  api_key:
+    secure: zebmSSMdrL8KdzCJH11DPHng7hFPURA5RYrvfUJlcoQmHr3opnqb6DUUpP3tUGsQgZoZP2jn8rh9Je4lkSd+Z/B0ADajVuYcUEU1Wz7843VMj1rcTuYIL+hK/ZOrh+hqq4yq3OFCw5y6SAUtVn6jLpAVz2YcRInHJLjmkIiMEQRp/flZexaRd4CmMk+9h7lhAA+5QoSK10BskQKTXtw6z3FZR9BFy53MoEu3pCxohOp/c8jozcNsVe/+Jm9hUaPWvVYFbn0B6oGGiogRh8XwBQeTZUyqBAr5ZhHez6bJOrh6PQdv63jGsmq7nS3Ny7nbdw33SNLeqImtlNvOz20HuF8jUrtgr7jsY1mHGFg0ZgijI66+EkMohPJ0YKkW0uN9CaSXqXlORsTFsr4HcQvAY96nb5NxatBTN5t6rHWDCKyb524G5RR/VkF5G5goucsRm5FOQSU2styJqLVWRrAn7H/aA7WRf5DNCRPJe4I9/mdz6tMB53g8WM7t77GEuBn4vM2ANzi/fdqcqUej3fzT+j6Ot8Qb0r/XLlSAPZQiVre93JAYNS6L5yaR0o1hZlKfhYjpioYmCyHWJpp5TRzgKmepX6WfhbvLOD9pKw1Og+D8DW3RPyZDM7kV0mVpJHGtBXLnS7AN1q0SvwaReYa/dqe6kjWrrgJfHPmS4Td4ul4=
+  on:
+    tags: true
+    repo: makojs/css
+    node: stable

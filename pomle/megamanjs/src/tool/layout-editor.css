@@ -1,0 +1,129 @@
+.workspace {
+    border-bottom-width: 1px;
+    height: 750px;
+    overflow: hidden;
+    position: relative;
+}
+
+.workspace .viewport {
+    height: 100%;
+}
+
+.workspace .viewport * {
+    -webkit-user-select: none;
+}
+
+.workspace .viewport > canvas {
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+.workspace .viewport .coords {
+    /*background-color: rgba(0,0,0,.5);*/
+    color: #fff;
+    font-family: monospace;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: center;
+}
+
+.level-editor .console textarea[name=console] {
+    font-family: monospace;
+    height: 8em;
+    width: 100%;
+}
+
+
+.workspace legend {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.workspace .panel label {
+    display: block;
+    margin: 4px 0;
+}
+
+.workspace .panel input[type=checkbox] {
+    margin: 0;
+    position: relative;
+    top: 2px;
+}
+
+.workspace .panel {
+    background-color: rgba(0,0,0,.85);
+    border-color: rgba(160,195,210,.3);
+    border-radius: 0;
+    bottom: 0;
+    padding: 10px 5px;
+    position: absolute;
+    top: 0;
+    width: 150px;
+}
+
+.workspace .panel.view {
+    border-right-width: 1px;
+    left: -140;
+}
+
+.workspace .panel.view:hover,
+.workspace .panel.view.locked {
+    left: 0;
+}
+
+.workspace .panel.item {
+    border-left-width: 1px;
+    right: -140;
+    text-align: left;
+}
+
+.workspace .panel.item:hover,
+.workspace .panel.item.locked {
+    right: 0;
+}
+
+.workspace .panel.item .properties input[type=text] {
+    color: #fff;
+    font-family: monospace;
+    padding: .1em .2em;
+    text-align: right;
+    width: 5em;
+}
+
+.workspace .panel.item .properties input[disabled] {
+    opacity: .5;
+}
+
+.workspace .palette {
+    background-color: rgba(0,0,0,.6);
+    margin: -5px;
+    position: absolute;
+    overflow: auto;
+    left: 25%;
+    right: 25%;
+    top: 5%;
+    transition: all .3s ease;
+    width: 50%;
+}
+
+.workspace .palette.hidden {
+    top: -100%;
+}
+
+.workspace .palette .animation {
+    border: solid 1px rgba(0,0,0,0);
+    box-shadow: 0 0 8px 0 rgba(0,0,0,1);
+    box-sizing: border-box;
+    float: left;
+    image-rendering: pixelated;
+    margin: 2px;
+    pointer-events: all;
+    zoom: 2;
+}
+
+.workspace .palette .animation.selected {
+    border-color: rgba(0, 255, 255, .8);
+}

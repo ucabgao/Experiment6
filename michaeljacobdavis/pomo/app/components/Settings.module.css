@@ -1,0 +1,57 @@
+.container {
+  background: #f0f0f0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.input {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial;
+  font-size: 1.1rem;
+  width: 3em;
+  margin-left: auto;
+  text-align: right;
+  height: 1.5rem;
+}
+
+.label {
+  display: flex;
+  line-height: 1.5rem;
+  vertical-align: baseline;
+}
+
+.input-container {
+  border-width: 1px 0;
+  border-bottom-color: rgba(0, 0, 0, 0.05);
+  border-top-color: rgba(255, 255, 255, 0.3);
+  border-style: solid;
+  padding: 0.5em 1em;
+}
+
+.title-bar-container {
+  composes: title-bar-container from './TitleBar.module.css';
+}
+
+.title-bar-back {
+  composes: fa-angle-left from global;
+}
+
+.title-bar-back-running {
+  composes: title-bar-back;
+  composes: title-bar-item-running from './TitleBar.module.css';
+}
+
+.title-bar-back-paused {
+  composes: title-bar-back;
+  composes: title-bar-item-paused from './TitleBar.module.css';
+}
+
+.title-bar-empty {
+  composes: title-bar-item from './TitleBar.module.css';
+}
+
+.heading {
+  composes: title-bar-header from './TitleBar.module.css';
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "ear_roulette",
+  "version": "1.0.0",
+  "description": "### Description Ear Roulette is a jukebox for people with short attention spans. All of the tracks in the jukebox last for 30 seconds before the next one is played. You will never be bored of music again.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newyork-anthonyng/Ear_Roulette.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newyork-anthonyng/Ear_Roulette/issues"
+  },
+  "homepage": "https://github.com/newyork-anthonyng/Ear_Roulette#readme",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "jsonwebtoken": "^5.4.1",
+    "mongoose": "^4.2.9",
+    "morgan": "^1.6.1",
+    "player": "^0.6.1",
+    "request": "^2.67.0"
+  }
+}

@@ -1,0 +1,7 @@
+.paused {
+  background: linear-gradient(to top, #4CB8C4, #3CD3AD);
+}
+
+.running {
+  background: linear-gradient(to top, #fd746c ,#ff9068);
+}

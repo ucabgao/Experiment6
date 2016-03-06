@@ -1,0 +1,25 @@
+{
+    "name": "skritter-html5",
+    "description": "Learn to write Chinese and Japanese characters.",
+    "author": {
+        "name": "Joshua McFarland",
+        "url": "http://www.joshmcfarland.net/"
+    },
+    "license": "MIT",
+    "version": "0.0.2717",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/skritter/skritter-html5"
+    },
+    "devDependencies": {
+        "grunt": "0.4.5",
+        "grunt-contrib-clean": "0.6.0",
+        "grunt-contrib-copy": "0.7.0",
+        "grunt-contrib-csslint": "0.4.0",
+        "grunt-contrib-htmlmin": "0.4.0",
+        "grunt-contrib-jshint": "0.11.0",
+        "grunt-replace": "0.8.0",
+        "grunt-contrib-requirejs": "0.4.4",
+        "grunt-contrib-yuidoc": "0.7.0"
+    }
+}

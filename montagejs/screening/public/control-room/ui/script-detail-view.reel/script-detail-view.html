@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="script-detail-view.css" />
+        <script type="text/montage-serialization">
+        {
+            "textfield1": {
+                "module": "montage/ui/textfield.reel",
+                "name": "Textfield",
+                "properties": {
+                    "element": {"#": "name"}
+                },
+                "bindings": {
+                    "value": {
+                        "boundObject": {"@": "owner"},
+                        "boundObjectPropertyPath": "scriptSource.name",
+                        "oneway": true
+                    }
+                }
+            },
+            "textfield2": {
+                "module": "montage/ui/textfield.reel",
+                "name": "Textfield",
+                "properties": {
+                    "element": {"#": "tags"}
+                },
+                "bindings": {
+                    "value": {
+                        "boundObject": {"@": "owner"},
+                        "boundObjectPropertyPath": "scriptSource.displayTags",
+                        "oneway": true
+                    }
+                }
+            },
+            "dynamictext3": {
+                "module": "montage/ui/dynamic-text.reel",
+                "name": "DynamicText",
+                "properties": {
+                    "element": {"#": "serverVersion"}
+                },
+                "bindings": {
+                    "value": {
+                        "boundObject": {"@": "owner"},
+                        "boundObjectPropertyPath": "serverVersion",
+                        "oneway": true
+                    }
+                }
+            },
+            "textfield3": {
+                "module": "montage/ui/textfield.reel",
+                "name": "Textfield",
+                "properties": {
+                    "element": {"#": "code"}
+                },
+                "bindings": {
+                    "value": {
+                        "boundObject": {"@": "owner"},
+                        "boundObjectPropertyPath": "scriptSource.code",
+                        "oneway": true
+                    }
+                }
+            },
+            "actioneventlistener1": {
+                "module": "montage/core/event/action-event-listener",
+                "name": "ActionEventListener",
+                "properties": {
+                    "handler": {"@": "owner"},
+                    "action": "downloadScriptSource"
+                }
+            },
+            "button1": {
+                "module": "montage/ui/button.reel",
+                "name": "Button",
+                "properties": {
+                    "element": {"#": "download"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "actioneventlistener1"},
+                        "capture": false
+                    }
+                ]
+            },
+            "actioneventlistener2": {
+                "module": "montage/core/event/action-event-listener",
+                "name": "ActionEventListener",
+                "properties": {
+                    "handler": {"@": "owner"},
+                    "action": "runScriptSource"
+                }
+            },
+            "button2": {
+                "module": "montage/ui/button.reel",
+                "name": "Button",
+                "properties": {
+                    "element": {"#": "run"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "actioneventlistener2"},
+                        "capture": false
+                    }
+                ]
+            },
+            "actioneventlistener3": {
+                "module": "montage/core/event/action-event-listener",
+                "name": "ActionEventListener",
+                "properties": {
+                    "handler": {"@": "owner"},
+                    "action": "showAllResults"
+                }
+            },
+            "button3": {
+                "module": "montage/ui/button.reel",
+                "name": "Button",
+                "properties": {
+                    "element": {"#": "allResults"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "actioneventlistener3"},
+                        "capture": false
+                    }
+                ]
+            },
+            "actioneventlistener4": {
+                "module": "montage/core/event/action-event-listener",
+                "name": "ActionEventListener",
+                "properties": {
+                    "handler": {"@": "owner"},
+                    "action": "deleteScriptSource"
+                }
+            },
+            "button4": {
+                "module": "montage/ui/button.reel",
+                "name": "Button",
+                "properties": {
+                    "element": {"#": "delete"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "actioneventlistener4"},
+                        "capture": false
+                    }
+                ]
+            },
+            "actioneventlistener5": {
+                "module": "montage/core/event/action-event-listener",
+                "name": "ActionEventListener",
+                "properties": {
+                    "handler": {"@": "owner"},
+                    "action": "saveScriptSource"
+                }
+            },
+            "button5": {
+                "module": "montage/ui/button.reel",
+                "name": "Button",
+                "properties": {
+                    "element": {"#": "save"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "actioneventlistener5"},
+                        "capture": false
+                    }
+                ]
+            },
+            "actioneventlistener6": {
+                "module": "montage/core/event/action-event-listener",
+                "name": "ActionEventListener",
+                "properties": {
+                    "handler": {"@": "owner"},
+                    "action": "recordScript"
+                }
+            },
+            "button6": {
+                "module": "montage/ui/button.reel",
+                "name": "Button",
+                "properties": {
+                    "element": {"#": "record"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "actioneventlistener6"},
+                        "capture": false
+                    }
+                ]
+            },
+            "actioneventlistener7": {
+                "module": "montage/core/event/action-event-listener",
+                "name": "ActionEventListener",
+                "properties": {
+                    "handler": {"@": "owner"},
+                    "action": "pauseRecordScript"
+                }
+            },
+            "button7": {
+                "module": "montage/ui/button.reel",
+                "name": "Button",
+                "properties": {
+                    "element": {"#": "pauseRecord"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "actioneventlistener7"},
+                        "capture": false
+                    }
+                ]
+            },
+            "actioneventlistener8": {
+                "module": "montage/core/event/action-event-listener",
+                "name": "ActionEventListener",
+                "properties": {
+                    "handler": {"@": "owner"},
+                    "action": "showSettings"
+                }
+            },
+            "button8": {
+                "module": "montage/ui/button.reel",
+                "name": "Button",
+                "properties": {
+                    "element": {"#": "settings"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "actioneventlistener8"},
+                        "capture": false
+                    }
+                ]
+            },
+            "textprompt1": {
+                "module": "common/ui/text-prompt.reel",
+                "name": "TextPrompt",
+                "properties": {
+                    "msg": "Enter application URL:",
+                    "value": "/screening/samples/sample.html",
+                    "element": {"#": "urlPrompt"}
+                }
+            },
+            "owner": {
+                "module": "control-room/ui/script-detail-view.reel",
+                "name": "ScriptDetailView",
+                "properties": {
+                    "element": {"#": "scriptDetail"},
+                    "scriptCode": {"@": "textfield3"},
+                    "scriptNameField": {"@": "textfield1"},
+                    "scriptTags": {"@": "textfield2"},
+                    "saveButton": {"@": "button5"},
+                    "pauseRecordButton": {"@": "button7"},
+                    "recordButton": {"@": "button6"},
+                    "urlPrompt": {"@": "textprompt1"}
+                }
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <!-- One line summary of a test script -->
+        <div id="scriptDetail" class="scriptDetail">
+            <div class="menuBar">
+                <div class="buttonToggle">
+                    <button id="pauseRecord" class="red" style="display: none;">Pause Recording</button>
+                    <button id="record" class="red">Record</button>
+                </div>
+                <div class="buttonGroup">
+                    <button id="run" class="green">Run</button>
+                </div>
+                <div class="buttonGroup">
+                    <button id="save">Save</button>
+                    <button id="delete">Delete</button>
+                    <button id="download">Download</button>
+                </div>
+                <div class="buttonGroup spacer"></div>
+                <div class="buttonGroup">
+                    <button id="allResults">All Results</button>
+                </div>
+                <div class="buttonGroup">
+                    <button id="settings">Preferences</button>
+                </div>
+                <div class="buttonGroup">
+                    <div class="versionString">Ver. <span id="serverVersion">--</span></div>
+                </div>
+            </div>
+            <div class="codeHeader">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="name">
+                <label for="tags">Tags</label>
+                <input type="text" id="tags" class="tags" placeholder="Space separated. Use &quot; &quot; for tag with multiple words.">
+            </div>
+            <textarea type="text" id="code" class="code"></textarea>
+            <div id="urlPrompt" style="display: none; margin: auto;"></div>
+        </div>
+    </body>
+</html>

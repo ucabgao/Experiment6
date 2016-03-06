@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block head_block %}
+  {{ super() }}
+  <!--[if lte IE 8]>
+    <script type="text/javascript" src="{{ url_for('static', filename='components/flot/excanvas.min.js') }}"></script>
+    <![endif]-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='components/backgrid/lib/backgrid.min.css') }}"/>
+{% endblock %}
+{% block main %}
+  <div class="container">
+
+    <div id="main">
+      <div class="row">
+        <div name="display">
+          <ul class="view-switcher nav nav-pills nav-stacked pull-left">
+            <li class="map-li"><a href="#map">地图</a></li>
+            <li class="table-li"><a href="#table">列表</a></li>
+            <li class="stat-li"><a href="#stat">统计</a></li>
+          </ul>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <div class="map"></div>
+            <div class="table"></div>
+            <div class="stat"></div>
+            <div class="timeline"></div>
+            <div class="stable"></div>
+          </div>
+        </div>
+        <div class="control-panel col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+      </div>
+    </div>
+  </div><!-- /.container -->
+{% endblock %}
+
+{% block tail_block %}
+  {{ super() }}
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=SwpHSZo7lxB794VNXA9U2d5q"></script>
+  <script type="text/javascript" data-main="{{ url_for('static', filename='js/main.js', bust=time) }}" src="{{ url_for('static', filename='components/requirejs/require.js') }}"></script>
+
+{% endblock %}
+

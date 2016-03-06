@@ -1,0 +1,14 @@
+﻿<div class="room-display row" ng-click="openRoom()">
+    <div class="col-sm-2">
+        <span class="bold" ng-bind="roomItem.Name"></span>
+    </div>
+    <div class="col-sm-4">
+        <span ng-bind="roomItem.Description"></span>
+    </div>
+    <div class="col-sm-6">
+        <div class="rooms-users">
+            <user-display ng-repeat="user in roomItem.Users" user="user" display-size="xs"></user-display>
+        </div>
+    </div>
+
+</div>

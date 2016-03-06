@@ -1,0 +1,4 @@
+exports.TIMER_TICK = 'TIMER_TICK';
+exports.TIMER_START = 'TIMER_START';
+exports.TIMER_PAUSE = 'TIMER_PAUSE';
+exports.TIMER_RESET = 'TIMER_RESET';

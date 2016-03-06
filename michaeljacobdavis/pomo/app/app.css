@@ -1,0 +1,51 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial;
+  overflow-y: hidden;
+}
+
+.slide-left-enter {
+  position: absolute;
+  left: 100%;
+  transition: 0.15s linear;
+}
+
+.slide-left-enter.slide-left-enter-active {
+  position: absolute;
+  left: 0;
+}
+
+.slide-left-leave {
+  position: absolute;
+  left: 0;
+  transition: 0.15s linear;
+}
+
+.slide-left-leave.slide-left-leave-active {
+  position: absolute;
+  left: -100%;
+}
+
+.slide-right-enter {
+  position: absolute;
+  right: 100%;
+  transition: 0.15s linear;
+}
+
+.slide-right-enter.slide-right-enter-active {
+  position: absolute;
+  right: 0;
+}
+
+.slide-right-leave {
+  position: absolute;
+  right: 0;
+  transition: 0.15s linear;
+}
+
+.slide-right-leave.slide-right-leave-active {
+  position: absolute;
+  right: -100%;
+}

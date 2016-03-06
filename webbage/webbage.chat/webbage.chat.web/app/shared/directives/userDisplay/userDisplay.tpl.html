@@ -1,0 +1,7 @@
+﻿<div class="user-display pull-left" ng-class="displaySize">
+    <img ng-src="{{user.Picture}}" />
+    <span ng-bind="user.Name" ng-hide="hideName" ng-cloak></span>
+    <ul class="user-context-menu" ng-show="showContextMenu" ng-cloak>
+        <li ng-click="kickMe({u: user})">Kick</li>
+    </ul>
+</div>

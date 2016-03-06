@@ -1,0 +1,73 @@
+<ul id="sidebar-default" class="nav nav-pills nav-stacked sidebar left"></ul>
+
+<ul id="sidebar-info" class="nav nav-pills nav-stacked sidebar right">
+    <div class="container">
+        <div class="info info-options">
+            <i class="fa fa-2x invisible"></i>
+            <i class="info-star cursor fa fa-2x fa-star-o pull-left"></i>
+            <i class="info-ban cursor fa fa-2x fa-ban pull-left"></i>
+            <div class="info-pleco cursor pull-left"><img src="images/icon-pleco.png" class="pleco-icon"></div>
+        </div>
+        <div class="info">
+            <hr>
+            <div class="info-tag">Writing</div>
+            <span class="info-writing asian-font text-large"></span>
+        </div>
+        <div class="info">
+            <hr>
+            <div class="info-tag">Reading</div>
+            <span class="info-reading text-tiny"></span>
+        </div>
+        <div class="info">
+            <hr>
+            <div class="info-tag">Heisig Keyword</div>
+            <span class="info-heisig text-tiny"></span>
+        </div>
+        <div class="info">
+            <hr>
+            <div class="info-tag">Definition</div>
+            <span class="info-definition text-tiny"></span>
+            <button type="button" class="edit-definition btn btn-xs btn-default spacing text-xxtiny">Edit</button>
+        </div>
+        <div class="info">
+            <hr>
+            <div class="info-tag">Mnemonic</div>
+            <span class="info-mnemonic text-tiny"></span>
+            <button type="button" class="edit-mnemonic btn btn-xs btn-default spacing text-xxtiny">Edit</button>
+        </div>
+        <div class="info">
+            <hr>
+            <div class="info-tag">Decomps</div>
+            <span class="info-decomps text-small"></span>
+        </div>
+        <div class="info">
+            <hr>
+            <div class="info-tag">Contained</div>
+            <span class="info-contained text-small"></span>
+        </div>
+        <div class="info">
+            <hr>
+            <div class="info-tag">Sentence</div>
+            <div class="info-sentence text-small asian-font"></div>
+            <div class="info-sentence-toggle">
+                <div class="info-sentence-reading text-xtiny"></div>
+                <div class="info-sentence-definition text-xtiny"></div>
+            </div>
+        </div>
+    </div>
+</ul>
+
+<ul id="sidebar-menu" class="nav nav-pills nav-stacked sidebar left">
+    <li class="navigate" data-url="#"><a href="#"><i class="fa fa-dashboard"></i> {{sidebar.dashboard}}</a></li>
+    <li class="navigate" data-url="study"><a href="#"><i class="fa fa-pencil"></i> {{sidebar.study}}</a></li>
+    <li class="navigate" data-url="list"><a href="#"><i class="fa fa-list"></i> {{sidebar.lists}}</a></li>
+    <li class="navigate" data-url="words"><a href="#"><i class="fa fa-tags"></i> {{sidebar.words}}</a></li>
+    <hr>
+    <li class="navigate" data-url="filters"><a href="#"><i class="fa fa-filter"></i> {{sidebar.filters}}</a></li>
+    <li class="navigate" data-url="settings"><a href="#"><i class="fa fa-cogs"></i> {{sidebar.settings}}</a></li>
+    <li class="navigate" data-url="account"><a href="#"><i class="fa fa-user"></i> {{sidebar.account}}</a></li>
+    <hr>
+    <li class="navigate" data-url="forum"><a href="#"><i class="fa fa-comments-o"></i> {{sidebar.forum}}</a></li>
+    <li ><a href="#"><i class="fa fa-github"></i> <span class="application-version text-muted"></span></a></li>
+    <li class="action-logout"><a href="#"><i class="fa fa-power-off"></i> {{sidebar.logout}}</a></li>
+</ul>

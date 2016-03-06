@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "@dominicbarnes",
+    "@dominicbarnes/node"
+  ],
+  "rules": {
+    "no-invalid-this": 0
+  }
+}

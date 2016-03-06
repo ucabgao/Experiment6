@@ -1,0 +1,933 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93E60BC5-4C45-4153-8557-B39F5FE1B950}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>webbage.chat.web</RootNamespace>
+    <AssemblyName>webbage.chat.web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\components\about\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\components\default\controllers\loginCtrl.js" />
+    <Content Include="app\components\default\controllers\navCtrl.js" />
+    <Content Include="app\components\default\views\login.tpl.html" />
+    <Content Include="app\components\default\webbage.chat.js" />
+    <Content Include="app\components\rooms\controllers\roomCtrl.js" />
+    <Content Include="app\components\rooms\views\room.tpl.html" />
+    <Content Include="app\components\rooms\views\rooms.tpl.html" />
+    <Content Include="app\components\rooms\webbage.chat.rooms.js" />
+    <Content Include="app\components\rooms\controllers\roomsCtrl.js" />
+    <Content Include="app\shared\directives\message\message.tpl.html" />
+    <Content Include="app\shared\directives\roomDisplay\roomDisplay.tpl.html" />
+    <Content Include="app\shared\directives\userDisplay\userDisplay.tpl.html" />
+    <Content Include="app\shared\directives\message\webbage.chat.directives.message.js" />
+    <Content Include="app\shared\services\webbage.chat.services.signalR.js" />
+    <Content Include="app\shared\services\webbage.chat.services.state.js" />
+    <Content Include="content\bower\angular-jwt\dist\angular-jwt.js" />
+    <Content Include="content\bower\angular-jwt\dist\angular-jwt.min.js" />
+    <Content Include="content\bower\angular-jwt\gulpfile.js" />
+    <Content Include="content\bower\angular-jwt\karma-dist-concatenated.conf.js" />
+    <Content Include="content\bower\angular-jwt\karma-dist-minified.conf.js" />
+    <Content Include="content\bower\angular-jwt\karma-src.conf.js" />
+    <Content Include="content\bower\angular-jwt\LICENSE.txt" />
+    <Content Include="content\bower\auth0-storage\dist\angular-storage.js" />
+    <Content Include="content\bower\auth0-storage\dist\angular-storage.min.js" />
+    <Content Include="content\bower\auth0-storage\gulpfile.js" />
+    <Content Include="content\bower\auth0-storage\karma-dist-concatenated.conf.js" />
+    <Content Include="content\bower\auth0-storage\karma-dist-minified.conf.js" />
+    <Content Include="content\bower\auth0-storage\karma-src-all.conf.js" />
+    <Content Include="content\bower\auth0-storage\karma-src.conf.js" />
+    <Content Include="content\bower\auth0-storage\LICENSE.txt" />
+    <Content Include="content\bower\angular-animate\angular-animate.js" />
+    <Content Include="content\bower\angular-animate\angular-animate.min.js" />
+    <Content Include="content\bower\angular-cookies\angular-cookies.js" />
+    <Content Include="content\bower\angular-cookies\angular-cookies.min.js" />
+    <Content Include="content\bower\angular-hotkeys\build\hotkeys.css" />
+    <Content Include="content\bower\angular-hotkeys\build\hotkeys.js" />
+    <Content Include="content\bower\angular-hotkeys\build\hotkeys.min.css" />
+    <Content Include="content\bower\angular-hotkeys\build\hotkeys.min.js" />
+    <Content Include="content\bower\angular-hotkeys\Gruntfile.js" />
+    <Content Include="content\bower\angular-hotkeys\src\hotkeys.css" />
+    <Content Include="content\bower\angular-hotkeys\src\hotkeys.js" />
+    <Content Include="content\bower\angular-route\angular-route.js" />
+    <Content Include="content\bower\angular-route\angular-route.min.js" />
+    <Content Include="content\bower\angular-ui\.gitignore" />
+    <Content Include="content\bower\angular-ui\build\angular-ui-ieshiv.js" />
+    <Content Include="content\bower\angular-ui\build\angular-ui-ieshiv.min.js" />
+    <Content Include="content\bower\angular-ui\build\angular-ui.css" />
+    <Content Include="content\bower\angular-ui\build\angular-ui.js" />
+    <Content Include="content\bower\angular-ui\build\angular-ui.min.css" />
+    <Content Include="content\bower\angular-ui\build\angular-ui.min.js" />
+    <Content Include="content\bower\angular-ui\common\ieshiv\ieshiv.js" />
+    <Content Include="content\bower\angular-ui\common\module.js" />
+    <Content Include="content\bower\angular-ui\grunt.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\animate\animate.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\animate\test\animateSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\calendar\calendar.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\calendar\test\calendarSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\codemirror\codemirror.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\codemirror\test\codemirrorSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\currency\currency.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\currency\test\currencySpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\date\date.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\date\test\dateSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\event\event.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\event\test\eventSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\if\if.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\if\test\ifSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\jq\jq.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\jq\test\jqSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\keypress\keypress.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\keypress\test\keydownSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\keypress\test\keypressSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\keypress\test\keyupSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\map\map.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\map\test\mapSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\mask\mask.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\mask\test\maskSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\reset\reset.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\reset\test\resetSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\route\route.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\route\test\routeSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\scrollfix\scrollfix.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\scrollfix\test\scrollfixSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\select2\select2.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\select2\test\select2Spec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\showhide\showhide.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\showhide\test\showhideSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\sortable\sortable.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\sortable\test\sortableSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\tinymce\test\tinymceSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\tinymce\tinymce.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\validate\test\validateSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\directives\validate\validate.js" />
+    <Content Include="content\bower\angular-ui\modules\filters\format\format.js" />
+    <Content Include="content\bower\angular-ui\modules\filters\format\test\formatSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\filters\highlight\highlight.js" />
+    <Content Include="content\bower\angular-ui\modules\filters\highlight\test\highlightSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\filters\inflector\inflector.js" />
+    <Content Include="content\bower\angular-ui\modules\filters\inflector\test\inflectorSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\filters\unique\test\uniqueSpec.js" />
+    <Content Include="content\bower\angular-ui\modules\filters\unique\unique.js" />
+    <Content Include="content\bower\angular-ui\templates\template.js" />
+    <Content Include="content\bower\angular-ui\templates\test\templateSpec.js" />
+    <Content Include="content\bower\angular-ui\test\lib\angular-1.0.1\angular-mocks.js" />
+    <Content Include="content\bower\angular-ui\test\lib\angular-1.0.1\angular.js" />
+    <Content Include="content\bower\angular-ui\test\lib\angular\angular-1.0.0rc4.js" />
+    <Content Include="content\bower\angular-ui\test\lib\angular\angular-1.0.0rc5.js" />
+    <Content Include="content\bower\angular-ui\test\lib\angular\angular-mocks.js" />
+    <Content Include="content\bower\angular-ui\test\lib\bootstrap\bootstrap-modal.js" />
+    <Content Include="content\bower\angular-ui\test\lib\codemirror\codemirror.js" />
+    <Content Include="content\bower\angular-ui\test\lib\googlemaps\googlemaps.js" />
+    <Content Include="content\bower\angular-ui\test\lib\jquery\jquery-1.7.2.js" />
+    <Content Include="content\bower\angular-ui\test\lib\jquery\jquery-ui-1.8.18.js" />
+    <Content Include="content\bower\angular-ui\test\lib\maskedinput\jquery.maskedinput-1.3.js" />
+    <Content Include="content\bower\angular-ui\test\lib\select2\select2.js" />
+    <Content Include="content\bower\angular-ui\test\lib\tinymce\jquery.tinymce.js" />
+    <Content Include="content\bower\angular-ui\test\lib\tinymce\tiny_mce.js" />
+    <Content Include="content\bower\angular-ui\test\test-config.js" />
+    <Content Include="content\bower\angular\angular-csp.css" />
+    <Content Include="content\bower\angular\angular.js" />
+    <Content Include="content\bower\angular\angular.min.js" />
+    <Content Include="content\bower\auth0-angular\.gitignore" />
+    <Content Include="content\bower\auth0-angular\build\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\build\auth0-angular.min.js" />
+    <Content Include="content\bower\auth0-angular\examples\custom-login\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\custom-login\scripts\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\examples\custom-login\scripts\controllers.js" />
+    <Content Include="content\bower\auth0-angular\examples\custom-login\scripts\myApp.js" />
+    <Content Include="content\bower\auth0-angular\examples\custom-login\views\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\custom-login\views\logout.html" />
+    <Content Include="content\bower\auth0-angular\examples\custom-login\views\root.html" />
+    <Content Include="content\bower\auth0-angular\examples\custom-signup\client\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\custom-signup\client\scripts\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\examples\custom-signup\client\scripts\controllers.js" />
+    <Content Include="content\bower\auth0-angular\examples\custom-signup\client\scripts\myApp.js" />
+    <Content Include="content\bower\auth0-angular\examples\custom-signup\client\views\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\custom-signup\client\views\logout.html" />
+    <Content Include="content\bower\auth0-angular\examples\custom-signup\client\views\root.html" />
+    <Content Include="content\bower\auth0-angular\examples\custom-signup\nodejs\app.js" />
+    <Content Include="content\bower\auth0-angular\examples\delegation-token\client\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\delegation-token\client\scripts\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\examples\delegation-token\client\scripts\controllers.js" />
+    <Content Include="content\bower\auth0-angular\examples\delegation-token\client\scripts\myApp.js" />
+    <Content Include="content\bower\auth0-angular\examples\delegation-token\client\views\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\delegation-token\client\views\logout.html" />
+    <Content Include="content\bower\auth0-angular\examples\delegation-token\client\views\root.html" />
+    <Content Include="content\bower\auth0-angular\examples\delegation-token\server.js" />
+    <Content Include="content\bower\auth0-angular\examples\html5mode\public\app.css" />
+    <Content Include="content\bower\auth0-angular\examples\html5mode\public\app.js" />
+    <Content Include="content\bower\auth0-angular\examples\html5mode\public\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\examples\html5mode\public\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\html5mode\public\info.html" />
+    <Content Include="content\bower\auth0-angular\examples\html5mode\public\main.html" />
+    <Content Include="content\bower\auth0-angular\examples\html5mode\server.js" />
+    <Content Include="content\bower\auth0-angular\examples\redirect\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\redirect\scripts\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\examples\redirect\scripts\controllers.js" />
+    <Content Include="content\bower\auth0-angular\examples\redirect\scripts\myApp.js" />
+    <Content Include="content\bower\auth0-angular\examples\redirect\views\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\redirect\views\logout.html" />
+    <Content Include="content\bower\auth0-angular\examples\redirect\views\root.html" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\app.css" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\app.js" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\auth0-variables.js" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\home\auth0_logo_final_blue_RGB.png" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\home\home.css" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\home\home.html" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\home\home.js" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\login\login.css" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\login\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\login\login.js" />
+    <Content Include="content\bower\auth0-angular\examples\requirejs\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\requirejs\scripts\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\examples\requirejs\scripts\config.js" />
+    <Content Include="content\bower\auth0-angular\examples\requirejs\scripts\controllers.js" />
+    <Content Include="content\bower\auth0-angular\examples\requirejs\scripts\myApp.js" />
+    <Content Include="content\bower\auth0-angular\examples\requirejs\scripts\require.js" />
+    <Content Include="content\bower\auth0-angular\examples\requirejs\views\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\requirejs\views\logout.html" />
+    <Content Include="content\bower\auth0-angular\examples\requirejs\views\root.html" />
+    <Content Include="content\bower\auth0-angular\examples\sso\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\sso\scripts\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\examples\sso\scripts\controllers.js" />
+    <Content Include="content\bower\auth0-angular\examples\sso\scripts\myApp.js" />
+    <Content Include="content\bower\auth0-angular\examples\sso\views\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\sso\views\logout.html" />
+    <Content Include="content\bower\auth0-angular\examples\sso\views\root.html" />
+    <Content Include="content\bower\auth0-angular\examples\ui-router\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\ui-router\scripts\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\examples\ui-router\scripts\controllers.js" />
+    <Content Include="content\bower\auth0-angular\examples\ui-router\scripts\myApp.js" />
+    <Content Include="content\bower\auth0-angular\examples\ui-router\views\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\ui-router\views\logout.html" />
+    <Content Include="content\bower\auth0-angular\examples\ui-router\views\root.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget-redirect\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget-redirect\scripts\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget-redirect\scripts\controllers.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget-redirect\scripts\myApp.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget-redirect\views\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget-redirect\views\logout.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget-redirect\views\root.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\app.css" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\app.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\auth0-variables.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\home\auth0_logo_final_blue_RGB.png" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\home\home.css" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\home\home.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\home\home.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\login\login.css" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\login\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\login\login.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\app.css" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\app.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\auth0-variables.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\home\auth0_logo_final_blue_RGB.png" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\home\home.css" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\home\home.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\home\home.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\login\login.css" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\login\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\login\login.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget\index.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget\scripts\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget\scripts\controllers.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget\scripts\myApp.js" />
+    <Content Include="content\bower\auth0-angular\examples\widget\views\login.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget\views\logout.html" />
+    <Content Include="content\bower\auth0-angular\examples\widget\views\root.html" />
+    <Content Include="content\bower\auth0-angular\Gruntfile.js" />
+    <Content Include="content\bower\auth0-angular\karma.conf.js" />
+    <Content Include="content\bower\auth0-angular\LICENSE.txt" />
+    <Content Include="content\bower\auth0-angular\scenario\protractor.conf.js" />
+    <Content Include="content\bower\auth0-angular\scenario\sanity.js" />
+    <Content Include="content\bower\auth0-angular\src\auth0-angular.js" />
+    <Content Include="content\bower\auth0-angular\test\test.js" />
+    <Content Include="content\bower\auth0-lock\.gitignore" />
+    <Content Include="content\bower\auth0-lock\build\auth0-lock.js" />
+    <Content Include="content\bower\auth0-lock\build\auth0-lock.min.js" />
+    <Content Include="content\bower\auth0-lock\example\build\index.css" />
+    <Content Include="content\bower\auth0-lock\example\index.html" />
+    <Content Include="content\bower\auth0-lock\example\login.html" />
+    <Content Include="content\bower\auth0-lock\Gruntfile.js" />
+    <Content Include="content\bower\auth0-lock\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\assert-required\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\bind\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\bonzo-augmented\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\css\main.css" />
+    <Content Include="content\bower\auth0-lock\lib\css\main.min.css" />
+    <Content Include="content\bower\auth0-lock\lib\gravatar\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\header\icon-container.js" />
+    <Content Include="content\bower\auth0-lock\lib\header\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\i18n\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\insert-css\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\is-small-screen\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\mode-kerberos\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\mode-loading\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\mode-loggedin\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\mode-reset\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\mode-signin\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\mode-signup\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\object-create\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\options-manager\auth-params.js" />
+    <Content Include="content\bower\auth0-lock\lib\options-manager\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\options-manager\whitelist.js" />
+    <Content Include="content\bower\auth0-lock\lib\password-strength\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\regex\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\stop-event\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\strategies\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\supports-animation\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\supports-placeholder\index.js" />
+    <Content Include="content\bower\auth0-lock\lib\utils\index.js" />
+    <Content Include="content\bower\auth0-lock\standalone.js" />
+    <Content Include="content\bower\auth0-lock\support\fonts\src\icomoon.svg" />
+    <Content Include="content\bower\auth0-lock\test\db_connections.tests.js" />
+    <Content Include="content\bower\auth0-lock\test\gravatar.tests.js" />
+    <Content Include="content\bower\auth0-lock\test\options.tests.js" />
+    <Content Include="content\bower\auth0-lock\test\password_strength.tests.js" />
+    <Content Include="content\bower\auth0-lock\test\reset.tests.js" />
+    <Content Include="content\bower\auth0-lock\test\signup.tests.js" />
+    <Content Include="content\bower\auth0-lock\test\support\characters-inception.test.js" />
+    <Content Include="content\bower\auth0-lock\test\support\config.js" />
+    <Content Include="content\bower\auth0-lock\test\tests.js" />
+    <Content Include="content\bower\auth0-lock\test_harness.html" />
+    <Content Include="content\bower\auth0.js\.gitignore" />
+    <Content Include="content\bower\auth0.js\build\auth0.js" />
+    <Content Include="content\bower\auth0.js\build\auth0.min.js" />
+    <Content Include="content\bower\auth0.js\example\index.html" />
+    <Content Include="content\bower\auth0.js\Gruntfile.js" />
+    <Content Include="content\bower\auth0.js\index.js" />
+    <Content Include="content\bower\auth0.js\lib\assert_required.js" />
+    <Content Include="content\bower\auth0.js\lib\base64_url_decode.js" />
+    <Content Include="content\bower\auth0.js\lib\is-array.js" />
+    <Content Include="content\bower\auth0.js\lib\json-parse.js" />
+    <Content Include="content\bower\auth0.js\lib\LoginError.js" />
+    <Content Include="content\bower\auth0.js\lib\use_jsonp.js" />
+    <Content Include="content\bower\auth0.js\LICENSE.txt" />
+    <Content Include="content\bower\auth0.js\standalone.js" />
+    <Content Include="content\bower\auth0.js\test\logout.js" />
+    <Content Include="content\bower\auth0.js\test\sms.tests.js" />
+    <Content Include="content\bower\auth0.js\test\support\config.js" />
+    <Content Include="content\bower\auth0.js\test\tests.js" />
+    <Content Include="content\bower\auth0.js\test\user-and-pass.tests.js" />
+    <Content Include="content\bower\auth0.js\test_harness.html" />
+    <Content Include="content\bower\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="content\bower\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="content\bower\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="content\bower\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="content\bower\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="content\bower\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="content\bower\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="content\bower\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="content\bower\bootstrap\Gruntfile.js" />
+    <Content Include="content\bower\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="content\bower\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="content\bower\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="content\bower\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="content\bower\bootstrap\js\affix.js" />
+    <Content Include="content\bower\bootstrap\js\alert.js" />
+    <Content Include="content\bower\bootstrap\js\button.js" />
+    <Content Include="content\bower\bootstrap\js\carousel.js" />
+    <Content Include="content\bower\bootstrap\js\collapse.js" />
+    <Content Include="content\bower\bootstrap\js\dropdown.js" />
+    <Content Include="content\bower\bootstrap\js\modal.js" />
+    <Content Include="content\bower\bootstrap\js\popover.js" />
+    <Content Include="content\bower\bootstrap\js\scrollspy.js" />
+    <Content Include="content\bower\bootstrap\js\tab.js" />
+    <Content Include="content\bower\bootstrap\js\tooltip.js" />
+    <Content Include="content\bower\bootstrap\js\transition.js" />
+    <Content Include="content\bower\fontawesome\.gitignore" />
+    <Content Include="content\bower\fontawesome\css\font-awesome.css" />
+    <Content Include="content\bower\fontawesome\css\font-awesome.min.css" />
+    <Content Include="content\bower\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="content\bower\jquery\dist\jquery.js" />
+    <Content Include="content\bower\jquery\dist\jquery.min.js" />
+    <Content Include="content\bower\jquery\MIT-LICENSE.txt" />
+    <Content Include="content\bower\jquery\src\ajax.js" />
+    <Content Include="content\bower\jquery\src\ajax\jsonp.js" />
+    <Content Include="content\bower\jquery\src\ajax\load.js" />
+    <Content Include="content\bower\jquery\src\ajax\parseJSON.js" />
+    <Content Include="content\bower\jquery\src\ajax\parseXML.js" />
+    <Content Include="content\bower\jquery\src\ajax\script.js" />
+    <Content Include="content\bower\jquery\src\ajax\var\nonce.js" />
+    <Content Include="content\bower\jquery\src\ajax\var\rquery.js" />
+    <Content Include="content\bower\jquery\src\ajax\xhr.js" />
+    <Content Include="content\bower\jquery\src\attributes.js" />
+    <Content Include="content\bower\jquery\src\attributes\attr.js" />
+    <Content Include="content\bower\jquery\src\attributes\classes.js" />
+    <Content Include="content\bower\jquery\src\attributes\prop.js" />
+    <Content Include="content\bower\jquery\src\attributes\support.js" />
+    <Content Include="content\bower\jquery\src\attributes\val.js" />
+    <Content Include="content\bower\jquery\src\callbacks.js" />
+    <Content Include="content\bower\jquery\src\core.js" />
+    <Content Include="content\bower\jquery\src\core\access.js" />
+    <Content Include="content\bower\jquery\src\core\init.js" />
+    <Content Include="content\bower\jquery\src\core\parseHTML.js" />
+    <Content Include="content\bower\jquery\src\core\ready.js" />
+    <Content Include="content\bower\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="content\bower\jquery\src\css.js" />
+    <Content Include="content\bower\jquery\src\css\addGetHookIf.js" />
+    <Content Include="content\bower\jquery\src\css\curCSS.js" />
+    <Content Include="content\bower\jquery\src\css\defaultDisplay.js" />
+    <Content Include="content\bower\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="content\bower\jquery\src\css\support.js" />
+    <Content Include="content\bower\jquery\src\css\swap.js" />
+    <Content Include="content\bower\jquery\src\css\var\cssExpand.js" />
+    <Content Include="content\bower\jquery\src\css\var\getStyles.js" />
+    <Content Include="content\bower\jquery\src\css\var\isHidden.js" />
+    <Content Include="content\bower\jquery\src\css\var\rmargin.js" />
+    <Content Include="content\bower\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="content\bower\jquery\src\data.js" />
+    <Content Include="content\bower\jquery\src\data\accepts.js" />
+    <Content Include="content\bower\jquery\src\data\Data.js" />
+    <Content Include="content\bower\jquery\src\data\var\data_priv.js" />
+    <Content Include="content\bower\jquery\src\data\var\data_user.js" />
+    <Content Include="content\bower\jquery\src\deferred.js" />
+    <Content Include="content\bower\jquery\src\deprecated.js" />
+    <Content Include="content\bower\jquery\src\dimensions.js" />
+    <Content Include="content\bower\jquery\src\effects.js" />
+    <Content Include="content\bower\jquery\src\effects\animatedSelector.js" />
+    <Content Include="content\bower\jquery\src\effects\Tween.js" />
+    <Content Include="content\bower\jquery\src\event.js" />
+    <Content Include="content\bower\jquery\src\event\ajax.js" />
+    <Content Include="content\bower\jquery\src\event\alias.js" />
+    <Content Include="content\bower\jquery\src\event\support.js" />
+    <Content Include="content\bower\jquery\src\exports\amd.js" />
+    <Content Include="content\bower\jquery\src\exports\global.js" />
+    <Content Include="content\bower\jquery\src\intro.js" />
+    <Content Include="content\bower\jquery\src\jquery.js" />
+    <Content Include="content\bower\jquery\src\manipulation.js" />
+    <Content Include="content\bower\jquery\src\manipulation\support.js" />
+    <Content Include="content\bower\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="content\bower\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="content\bower\jquery\src\offset.js" />
+    <Content Include="content\bower\jquery\src\outro.js" />
+    <Content Include="content\bower\jquery\src\queue.js" />
+    <Content Include="content\bower\jquery\src\queue\delay.js" />
+    <Content Include="content\bower\jquery\src\selector-native.js" />
+    <Content Include="content\bower\jquery\src\selector-sizzle.js" />
+    <Content Include="content\bower\jquery\src\selector.js" />
+    <Content Include="content\bower\jquery\src\serialize.js" />
+    <Content Include="content\bower\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="content\bower\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="content\bower\jquery\src\traversing.js" />
+    <Content Include="content\bower\jquery\src\traversing\findFilter.js" />
+    <Content Include="content\bower\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="content\bower\jquery\src\var\arr.js" />
+    <Content Include="content\bower\jquery\src\var\class2type.js" />
+    <Content Include="content\bower\jquery\src\var\concat.js" />
+    <Content Include="content\bower\jquery\src\var\hasOwn.js" />
+    <Content Include="content\bower\jquery\src\var\indexOf.js" />
+    <Content Include="content\bower\jquery\src\var\pnum.js" />
+    <Content Include="content\bower\jquery\src\var\push.js" />
+    <Content Include="content\bower\jquery\src\var\rnotwhite.js" />
+    <Content Include="content\bower\jquery\src\var\slice.js" />
+    <Content Include="content\bower\jquery\src\var\strundefined.js" />
+    <Content Include="content\bower\jquery\src\var\support.js" />
+    <Content Include="content\bower\jquery\src\var\toString.js" />
+    <Content Include="content\bower\jquery\src\wrap.js" />
+    <Content Include="content\bower\signalr\jquery.signalR.js" />
+    <Content Include="content\bower\signalr\jquery.signalR.min.js" />
+    <Content Include="content\css\chat.css" />
+    <Content Include="content\css\colors.css" />
+    <Content Include="content\css\site.css" />
+    <Content Include="content\img\background.jpg" />
+    <Content Include="content\img\bender.jpg" />
+    <Content Include="content\media\connection-notification.mp3" />
+    <Content Include="content\media\new-message-notification.mp3" />
+    <Content Include="content\scripts\utils.js" />
+    <Content Include="Global.asax" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="index.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hub\ChatHub.cs" />
+    <Compile Include="hub\RoomHub.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="startup\BundleConfig.cs" />
+    <Compile Include="startup\StartUp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\bower\bootstrap\.bower.json" />
+    <Content Include="content\bower\bootstrap\bower.json" />
+    <Content Include="content\bower\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="content\bower\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="content\bower\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\bower\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\bower\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="content\bower\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="content\bower\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\bower\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\bower\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="content\bower\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="content\bower\bootstrap\grunt\.jshintrc" />
+    <Content Include="content\bower\bootstrap\grunt\configBridge.json" />
+    <Content Include="content\bower\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="content\bower\bootstrap\js\.jscsrc" />
+    <Content Include="content\bower\bootstrap\js\.jshintrc" />
+    <Content Include="content\bower\bootstrap\less\.csscomb.json" />
+    <Content Include="content\bower\bootstrap\less\.csslintrc" />
+    <Content Include="content\bower\bootstrap\less\alerts.less" />
+    <Content Include="content\bower\bootstrap\less\badges.less" />
+    <Content Include="content\bower\bootstrap\less\bootstrap.less" />
+    <Content Include="content\bower\bootstrap\less\breadcrumbs.less" />
+    <Content Include="content\bower\bootstrap\less\button-groups.less" />
+    <Content Include="content\bower\bootstrap\less\buttons.less" />
+    <Content Include="content\bower\bootstrap\less\carousel.less" />
+    <Content Include="content\bower\bootstrap\less\close.less" />
+    <Content Include="content\bower\bootstrap\less\code.less" />
+    <Content Include="content\bower\bootstrap\less\component-animations.less" />
+    <Content Include="content\bower\bootstrap\less\dropdowns.less" />
+    <Content Include="content\bower\bootstrap\less\forms.less" />
+    <Content Include="content\bower\bootstrap\less\glyphicons.less" />
+    <Content Include="content\bower\bootstrap\less\grid.less" />
+    <Content Include="content\bower\bootstrap\less\input-groups.less" />
+    <Content Include="content\bower\bootstrap\less\jumbotron.less" />
+    <Content Include="content\bower\bootstrap\less\labels.less" />
+    <Content Include="content\bower\bootstrap\less\list-group.less" />
+    <Content Include="content\bower\bootstrap\less\media.less" />
+    <Content Include="content\bower\bootstrap\less\mixins.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\alerts.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\buttons.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\center-block.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\forms.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\gradients.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\grid.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\image.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\labels.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\list-group.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\opacity.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\pagination.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\panels.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\resize.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\size.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\table-row.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="content\bower\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="content\bower\bootstrap\less\modals.less" />
+    <Content Include="content\bower\bootstrap\less\navbar.less" />
+    <Content Include="content\bower\bootstrap\less\navs.less" />
+    <Content Include="content\bower\bootstrap\less\normalize.less" />
+    <Content Include="content\bower\bootstrap\less\pager.less" />
+    <Content Include="content\bower\bootstrap\less\pagination.less" />
+    <Content Include="content\bower\bootstrap\less\panels.less" />
+    <Content Include="content\bower\bootstrap\less\popovers.less" />
+    <Content Include="content\bower\bootstrap\less\print.less" />
+    <Content Include="content\bower\bootstrap\less\progress-bars.less" />
+    <Content Include="content\bower\bootstrap\less\responsive-embed.less" />
+    <Content Include="content\bower\bootstrap\less\responsive-utilities.less" />
+    <Content Include="content\bower\bootstrap\less\scaffolding.less" />
+    <Content Include="content\bower\bootstrap\less\tables.less" />
+    <Content Include="content\bower\bootstrap\less\theme.less" />
+    <Content Include="content\bower\bootstrap\less\thumbnails.less" />
+    <Content Include="content\bower\bootstrap\less\tooltip.less" />
+    <Content Include="content\bower\bootstrap\less\type.less" />
+    <Content Include="content\bower\bootstrap\less\utilities.less" />
+    <Content Include="content\bower\bootstrap\less\variables.less" />
+    <Content Include="content\bower\bootstrap\less\wells.less" />
+    <Content Include="content\bower\bootstrap\LICENSE" />
+    <Content Include="content\bower\bootstrap\package.json" />
+    <Content Include="content\bower\bootstrap\README.md" />
+    <Content Include="content\bower\fontawesome\.bower.json" />
+    <Content Include="content\bower\fontawesome\.npmignore" />
+    <Content Include="content\bower\fontawesome\bower.json" />
+    <Content Include="content\bower\fontawesome\css\font-awesome.css.map" />
+    <Content Include="content\bower\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="content\bower\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="content\bower\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="content\bower\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="content\bower\fontawesome\fonts\FontAwesome.otf" />
+    <Content Include="content\bower\fontawesome\less\animated.less" />
+    <Content Include="content\bower\fontawesome\less\bordered-pulled.less" />
+    <Content Include="content\bower\fontawesome\less\core.less" />
+    <Content Include="content\bower\fontawesome\less\fixed-width.less" />
+    <Content Include="content\bower\fontawesome\less\font-awesome.less" />
+    <Content Include="content\bower\fontawesome\less\icons.less" />
+    <Content Include="content\bower\fontawesome\less\larger.less" />
+    <Content Include="content\bower\fontawesome\less\list.less" />
+    <Content Include="content\bower\fontawesome\less\mixins.less" />
+    <Content Include="content\bower\fontawesome\less\path.less" />
+    <Content Include="content\bower\fontawesome\less\rotated-flipped.less" />
+    <Content Include="content\bower\fontawesome\less\stacked.less" />
+    <Content Include="content\bower\fontawesome\less\variables.less" />
+    <Content Include="content\bower\fontawesome\scss\font-awesome.scss" />
+    <Content Include="content\bower\fontawesome\scss\_animated.scss" />
+    <Content Include="content\bower\fontawesome\scss\_bordered-pulled.scss" />
+    <Content Include="content\bower\fontawesome\scss\_core.scss" />
+    <Content Include="content\bower\fontawesome\scss\_fixed-width.scss" />
+    <Content Include="content\bower\fontawesome\scss\_icons.scss" />
+    <Content Include="content\bower\fontawesome\scss\_larger.scss" />
+    <Content Include="content\bower\fontawesome\scss\_list.scss" />
+    <Content Include="content\bower\fontawesome\scss\_mixins.scss" />
+    <Content Include="content\bower\fontawesome\scss\_path.scss" />
+    <Content Include="content\bower\fontawesome\scss\_rotated-flipped.scss" />
+    <Content Include="content\bower\fontawesome\scss\_stacked.scss" />
+    <Content Include="content\bower\fontawesome\scss\_variables.scss" />
+    <Content Include="content\bower\angular-ui\.bower.json" />
+    <Content Include="content\bower\angular-ui\.travis.yml" />
+    <Content Include="content\bower\angular-ui\CHANGELOG.md" />
+    <Content Include="content\bower\angular-ui\common\ieshiv\README.md" />
+    <Content Include="content\bower\angular-ui\common\stylesheets\angular-ui.less" />
+    <Content Include="content\bower\angular-ui\common\stylesheets\mixins.less" />
+    <Content Include="content\bower\angular-ui\LICENSE" />
+    <Content Include="content\bower\angular-ui\modules\directives\calendar\dependencies.json" />
+    <Content Include="content\bower\angular-ui\modules\directives\codemirror\dependencies.json" />
+    <Content Include="content\bower\angular-ui\modules\directives\currency\README.md" />
+    <Content Include="content\bower\angular-ui\modules\directives\currency\stylesheets\currency.less" />
+    <Content Include="content\bower\angular-ui\modules\directives\date\dependencies.json" />
+    <Content Include="content\bower\angular-ui\modules\directives\date\README.md" />
+    <Content Include="content\bower\angular-ui\modules\directives\jq\README.md" />
+    <Content Include="content\bower\angular-ui\modules\directives\mask\dependencies.json" />
+    <Content Include="content\bower\angular-ui\modules\directives\reset\stylesheets\reset.less" />
+    <Content Include="content\bower\angular-ui\modules\directives\select2\dependencies.json" />
+    <Content Include="content\bower\angular-ui\modules\directives\sortable\REDME.md" />
+    <Content Include="content\bower\angular-ui\modules\directives\tinymce\dependencies.json" />
+    <Content Include="content\bower\angular-ui\modules\filters\highlight\highlight.less" />
+    <Content Include="content\bower\angular-ui\package.json" />
+    <Content Include="content\bower\angular-ui\README.md" />
+    <Content Include="content\bower\angular-ui\templates\dependencies.json" />
+    <Content Include="content\bower\angular-ui\templates\README.md" />
+    <Content Include="content\bower\angular-ui\templates\stylesheets\template.less" />
+    <Content Include="content\bower\angular-ui\test\lib\calendar\calendar.js.min" />
+    <Content Include="app\shared\directives\userDisplay\webbage.chat.directives.userDisplay.js" />
+    <Content Include="app\shared\directives\roomDisplay\webbage.chat.directives.roomDisplay.js" />
+    <Content Include="content\bower\signalr\.bower.json" />
+    <Content Include="content\bower\signalr\bower.json" />
+    <Content Include="content\bower\signalr\LICENSE.md" />
+    <Content Include="content\bower\signalr\README.md" />
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+    <Content Include="content\bower\angular-hotkeys\.bower.json" />
+    <Content Include="content\bower\angular-hotkeys\bower.json" />
+    <Content Include="content\bower\angular-hotkeys\LICENSE" />
+    <Content Include="content\bower\angular-hotkeys\package.json" />
+    <Content Include="content\bower\angular-hotkeys\README.md" />
+    <Content Include="app\shared\directives\scroll\webbage.chat.directives.scroll.js" />
+    <Content Include="content\bower\angular\.bower.json" />
+    <Content Include="content\bower\angular\angular.min.js.gzip" />
+    <Content Include="content\bower\angular\angular.min.js.map" />
+    <Content Include="content\bower\angular\bower.json" />
+    <Content Include="content\bower\angular\package.json" />
+    <Content Include="content\bower\angular\README.md" />
+    <Content Include="content\bower\auth0-angular\.bower.json" />
+    <Content Include="content\bower\auth0-angular\.bowerrc" />
+    <Content Include="content\bower\auth0-angular\.jshintrc" />
+    <Content Include="content\bower\auth0-angular\bower.json" />
+    <Content Include="content\bower\auth0-angular\CHANGELOG.md" />
+    <Content Include="content\bower\auth0-angular\docs\calling-an-api.md" />
+    <Content Include="content\bower\auth0-angular\docs\link-accounts.md" />
+    <Content Include="content\bower\auth0-angular\docs\refresh-token.md" />
+    <Content Include="content\bower\auth0-angular\docs\routing.md" />
+    <Content Include="content\bower\auth0-angular\docs\storing-information.md" />
+    <Content Include="content\bower\auth0-angular\docs\testing.md" />
+    <Content Include="content\bower\auth0-angular\examples\custom-login\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\custom-signup\nodejs\package.json" />
+    <Content Include="content\bower\auth0-angular\examples\custom-signup\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\delegation-token\package.json" />
+    <Content Include="content\bower\auth0-angular\examples\delegation-token\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\html5mode\package.json" />
+    <Content Include="content\bower\auth0-angular\examples\html5mode\Procfile" />
+    <Content Include="content\bower\auth0-angular\examples\html5mode\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\redirect\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\refresh-token\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\requirejs\.jshintrc" />
+    <Content Include="content\bower\auth0-angular\examples\requirejs\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\sso\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\ui-router\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\widget-redirect\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-api\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\widget-with-thirdparty-api\README.md" />
+    <Content Include="content\bower\auth0-angular\examples\widget\README.md" />
+    <Content Include="content\bower\auth0-angular\package.json" />
+    <Content Include="content\bower\auth0-angular\README.md" />
+    <Content Include="content\bower\auth0-lock\.bower.json" />
+    <Content Include="content\bower\auth0-lock\.jshintrc" />
+    <Content Include="content\bower\auth0-lock\.npmignore" />
+    <Content Include="content\bower\auth0-lock\.zuul.yml" />
+    <Content Include="content\bower\auth0-lock\bower.json" />
+    <Content Include="content\bower\auth0-lock\CHANGELOG.md" />
+    <Content Include="content\bower\auth0-lock\example\index.less" />
+    <Content Include="content\bower\auth0-lock\i18n\ar.json" />
+    <Content Include="content\bower\auth0-lock\i18n\da.json" />
+    <Content Include="content\bower\auth0-lock\i18n\de.json" />
+    <Content Include="content\bower\auth0-lock\i18n\en.json" />
+    <Content Include="content\bower\auth0-lock\i18n\es.json" />
+    <Content Include="content\bower\auth0-lock\i18n\fr-FR.json" />
+    <Content Include="content\bower\auth0-lock\i18n\he.json" />
+    <Content Include="content\bower\auth0-lock\i18n\it.json" />
+    <Content Include="content\bower\auth0-lock\i18n\ja.json" />
+    <Content Include="content\bower\auth0-lock\i18n\nb-NO.json" />
+    <Content Include="content\bower\auth0-lock\i18n\nl-NL.json" />
+    <Content Include="content\bower\auth0-lock\i18n\pt-BR.json" />
+    <Content Include="content\bower\auth0-lock\i18n\pt.json" />
+    <Content Include="content\bower\auth0-lock\i18n\ru.json" />
+    <Content Include="content\bower\auth0-lock\i18n\sv.json" />
+    <Content Include="content\bower\auth0-lock\i18n\tlh.json" />
+    <Content Include="content\bower\auth0-lock\i18n\tr.json" />
+    <Content Include="content\bower\auth0-lock\i18n\zh.json" />
+    <Content Include="content\bower\auth0-lock\lib\css\animate.less" />
+    <Content Include="content\bower\auth0-lock\lib\css\common.less" />
+    <Content Include="content\bower\auth0-lock\lib\css\keyframes.less" />
+    <Content Include="content\bower\auth0-lock\lib\css\main.less" />
+    <Content Include="content\bower\auth0-lock\lib\css\normalize.less" />
+    <Content Include="content\bower\auth0-lock\lib\css\reset.less" />
+    <Content Include="content\bower\auth0-lock\lib\css\themes\default.less" />
+    <Content Include="content\bower\auth0-lock\lib\css\zocial.less" />
+    <Content Include="content\bower\auth0-lock\lib\header\lock-header.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\html\lock-footer.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\html\lock.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\html\main.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\html\zocial-button.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\mode-kerberos\loggedin.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\mode-kerberos\loggedin_button.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\mode-loading\loading.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\mode-loggedin\loggedin.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\mode-loggedin\loggedin_button.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\mode-reset\reset.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\mode-signin\login_actions.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\mode-signin\signin.ejs" />
+    <Content Include="content\bower\auth0-lock\lib\mode-signup\signup.ejs" />
+    <Content Include="content\bower\auth0-lock\LICENSE" />
+    <Content Include="content\bower\auth0-lock\package.json" />
+    <Content Include="content\bower\auth0-lock\README.md" />
+    <Content Include="content\bower\auth0-lock\support\fonts\README.md" />
+    <Content Include="content\bower\auth0-lock\support\fonts\selection.json" />
+    <Content Include="content\bower\auth0-lock\support\fonts\src\icomoon.eot" />
+    <Content Include="content\bower\auth0-lock\support\fonts\src\icomoon.ttf" />
+    <Content Include="content\bower\auth0-lock\support\fonts\src\icomoon.woff" />
+    <Content Include="content\bower\auth0-lock\test\support\https-certs\server.crt" />
+    <Content Include="content\bower\auth0-lock\test\support\https-certs\server.key" />
+    <Content Include="content\bower\jquery\.bower.json" />
+    <Content Include="content\bower\jquery\bower.json" />
+    <Content Include="content\bower\jquery\dist\jquery.min.map" />
+    <Content Include="content\bower\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="content\bower\auth0.js\.bower.json" />
+    <Content Include="content\bower\auth0.js\.jshintrc" />
+    <Content Include="content\bower\auth0.js\.zuul.yml" />
+    <Content Include="content\bower\auth0.js\bower.json" />
+    <Content Include="content\bower\auth0.js\CHANGELOG.md" />
+    <Content Include="content\bower\auth0.js\package.json" />
+    <Content Include="content\bower\auth0.js\README.md" />
+    <Content Include="content\bower\auth0.js\test\https_test_certs\server.crt" />
+    <Content Include="content\bower\auth0.js\test\https_test_certs\server.key" />
+    <Content Include="content\bower\angular-animate\.bower.json" />
+    <Content Include="content\bower\angular-animate\angular-animate.min.js.map" />
+    <Content Include="content\bower\angular-animate\bower.json" />
+    <Content Include="content\bower\angular-animate\package.json" />
+    <Content Include="content\bower\angular-animate\README.md" />
+    <Content Include="content\bower\angular-cookies\.bower.json" />
+    <Content Include="content\bower\angular-cookies\angular-cookies.min.js.map" />
+    <Content Include="content\bower\angular-cookies\bower.json" />
+    <Content Include="content\bower\angular-cookies\package.json" />
+    <Content Include="content\bower\angular-cookies\README.md" />
+    <Content Include="content\bower\angular-route\.bower.json" />
+    <Content Include="content\bower\angular-route\angular-route.min.js.map" />
+    <Content Include="content\bower\angular-route\bower.json" />
+    <Content Include="content\bower\angular-route\package.json" />
+    <Content Include="content\bower\angular-route\README.md" />
+    <Content Include="content\bower\auth0-storage\.bower.json" />
+    <Content Include="content\bower\auth0-storage\bower.json" />
+    <Content Include="content\bower\auth0-storage\History.md" />
+    <Content Include="content\bower\auth0-storage\package.json" />
+    <Content Include="content\bower\auth0-storage\README.md" />
+    <Content Include="content\bower\angular-jwt\.bower.json" />
+    <Content Include="content\bower\angular-jwt\bower.json" />
+    <Content Include="content\bower\angular-jwt\History.md" />
+    <Content Include="content\bower\angular-jwt\package.json" />
+    <Content Include="content\bower\angular-jwt\README.md" />
+    <None Include="Properties\PublishProfiles\test.chat.webbage.net - Web Deploy.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\webbage.chat.context\webbage.chat.context.csproj">
+      <Project>{0151d60f-7d15-46b1-8fb2-fd667ad20d74}</Project>
+      <Name>webbage.chat.context</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\webbage.chat.model\webbage.chat.model.csproj">
+      <Project>{7f39e672-dd1a-41a6-8ec4-9f01042e1034}</Project>
+      <Name>webbage.chat.model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>48703</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8081/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

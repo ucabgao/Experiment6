@@ -1,0 +1,125 @@
+<div class="mobile page page-settings">
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-menu toggle">
+                    <div class="toggle-bars fa fa-bars"></div>
+                    <div class="toggle-text navbar-title"></div>
+                </button>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li class="navbar-item"><i class="fa fa-refresh navbar-icon"></i></li>-->
+            </ul>
+        </div>
+    </div>
+
+    <div class="container content-container padding-top">
+
+        <div class="content-box">
+            <h2></h2>
+            <p class="text-muted"></p>
+            <div id="adjustments" class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h5>
+                                <span class="setting-label">Audio</span>
+                                <input type="checkbox" id="audio" class="bootswitch" checked data-on-color="primary" data-off-color="default">
+                            </h5>
+                        </div>
+                        <div class="col-sm-3">
+                            <h5>
+                                <span class="setting-label">Hide Reading</span>
+                                <input type="checkbox" id="hide-reading" class="bootswitch" checked data-on-color="primary" data-off-color="default">
+                            </h5>
+                        </div>
+                        <div class="col-sm-3">
+                            <h5>
+                                <span class="setting-label">Grading Color</span>
+                                <input type="checkbox" id="grading-color" class="bootswitch" checked data-on-color="primary" data-off-color="default">
+                            </h5>
+                        </div>
+                        <div class="col-sm-3">
+                            <h5>
+                                <span class="setting-label">Raw Squigs</span>
+                                <input type="checkbox" id="raw-squigs" class="bootswitch" checked data-on-color="primary" data-off-color="default">
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h5>
+                                <span class="setting-label">Reading Style</span>
+                                <input type="checkbox" id="reading-style" class="bootswitch" checked data-on-color="primary" data-on-text="Pinyin" data-off-color="info" data-off-text="Zhuyin">
+                            </h5>
+                        </div>
+                        <div class="col-sm-4">
+                            <h5>
+                                <span class="setting-label">Heisig Keywords</span>
+                                <input type="checkbox" id="heisig" class="bootswitch" checked data-on-color="primary" data-off-color="default">
+                            </h5>
+                        </div>
+                        <!-- TODO: fix or remove
+                        <div class="col-sm-4">
+                            <h5>
+                                <span class="setting-label">Sentences</span>
+                                <input type="checkbox" id="example-sentences" class="bootswitch" data-on-color="primary" data-off-color="default">
+                            </h5>
+                        </div>
+                        -->
+                        <div class="col-sm-4">
+                            <h5>
+                                <span class="setting-label">Kana Support</span>
+                                <input type="checkbox" id="study-kana" class="bootswitch" checked data-on-color="primary" data-off-color="default">
+                                <strong class="text-lead text-warning">BETA</strong>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2></h2>
+            <p class="text-muted"></p>
+            <div id="flow-control" class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h5>
+                                <span class="setting-label">Auto Adding</span>
+                                <input type="checkbox" id="auto-add" class="bootswitch" checked data-on-color="primary" data-off-color="default">
+                            </h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5>
+                                <span class="setting-label">Daily Limit</span>
+                                <input id="auto-add-limit" type="number" min="1" max="100" value="10">
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 hidden">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h5>
+                                <span class="setting-label">Auto Advance</span>
+                                <input type="checkbox" id="auto-advance" class="bootswitch" checked data-on-color="primary" data-off-color="default">
+                            </h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5>
+                                <span class="setting-label">Advance Time</span>
+                                <input id="auto-advance-time" type="number" min="1" max="5" value="3">
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

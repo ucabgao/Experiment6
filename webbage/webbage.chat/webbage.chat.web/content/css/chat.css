@@ -1,0 +1,101 @@
+﻿.chat-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+    .chat-container > .chat-area {
+        height: 85%;
+        max-height: 85%;
+        overflow-y: scroll;
+        z-index: 999999;
+        padding-bottom: 10px;
+    }
+        .chat-container > .chat-area .message-container.consecutive-msg {
+            display: none;
+            margin-bottom: 10px;
+        }
+            .chat-container > .chat-area .row > .message-user {
+                padding: 5px;
+                padding-right: 10px;
+                text-align: right;
+            }
+            .chat-container > .chat-area .row > .chat-message {
+                padding: 5px;
+                background: #e7e7e7;
+                margin-top: 5px;   
+                border: 1px solid #e7e7e7;   
+                position: relative;
+                text-align: justify;
+
+                -ms-word-wrap: break-word;
+                word-wrap: break-word;
+            }
+            .chat-container > .chat-area .row > .chat-message.consecutive-msg {
+                margin-top: 0;
+            }
+            .chat-container > .chat-area .row > .chat-message.mine {
+                background: #e59650;
+                border-color: #e59650;
+            }
+                .chat-container > .chat-area .row > .chat-message:hover {
+                    border: 1px dotted #333;
+                }
+                .chat-container > .chat-area .row > .chat-message > .chat-message-time {
+                    position: absolute;
+                    padding: 2px;
+                    right: 3px;
+                    top: 4px;
+                    background: #f7f7f7;
+                    color: #333;
+                    font-size: 12px;
+                    font-style: italic;
+                }
+    .chat-container > .chat-users {
+        height: 85%;
+        max-height: 85%;
+        background: #e7e7e7;
+        overflow-y: scroll;
+    }   
+    .chat-container > .chat-message-buffer {
+        height: 15%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .chat-container > .chat-message {
+        height: 15%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+        .chat-container > .chat-message > .btn {
+            margin-top: -45px;
+            padding: 2px 4px;
+        }
+            .chat-container > .chat-message > .btn:hover,
+            .chat-container > .chat-message > .btn:focus,
+            .chat-container > .chat-message > .btn:active {
+                color: #ecf0f1;
+                outline: none;
+            }
+        .chat-container > .chat-message > i {
+            position: absolute;
+            bottom: 14%;
+            left: 683px;
+        }
+        .chat-container > .chat-message > textarea {
+            resize: none;
+            margin: 10px;
+            margin-left: -43px;
+            height: 80%;
+            width: 600px;
+        }
+
+@media only screen and (max-width: 991px) {
+    body .chat-container > .chat-message > textarea {
+        margin-left: 10px;
+    }
+    body .chat-container > .chat-message > i {
+        left: 735px;
+    }
+}
