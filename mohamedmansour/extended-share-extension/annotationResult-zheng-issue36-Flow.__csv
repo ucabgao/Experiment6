@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+mohamedmansour/extended-share-extension,36,8616eef403747c45554abdec456d4724be228628,Flow,Undetectable,"Missing a branch. For languages that use UTF-8 and symbols, its unicode version is really long, and causing G+ to block long posts. Forgot to handle such languages.",95.0
