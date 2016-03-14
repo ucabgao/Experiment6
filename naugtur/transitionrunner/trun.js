@@ -1,3 +1,12 @@
+/* @flow */
+
+class t {
+    getAttribute(x:string) :?string {};
+    setAttribute(x:string) :any {};
+    removeAttribute(x:string) :any {};
+    style:any;
+}
+
 var animate = (function(){
 	"use strict";
 
@@ -16,7 +25,7 @@ var animate = (function(){
 		}
 	}
 
-	return function(element,animationName,S){
+	return function(element:t,animationName,S){
 
 		var stepCounter,repeats=0,currentTimer;
 
