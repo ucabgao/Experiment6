@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+makojs/css,12,43ac1008efb3672e47cbd32b0b4150d21ca7ca00,TypeScript,Undetectable,"Parsing error. Forgot to parse the URL string when it has query parameters.",40.0
