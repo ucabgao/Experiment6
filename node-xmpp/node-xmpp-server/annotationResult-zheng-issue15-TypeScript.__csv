@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+node-xmpp/node-xmpp-server,15,e79a53edcca17bb7f92dce90a7b531e665627a26,TypeScript,Detectable,"JID documentation: https://github.com/node-xmpp/JID/blob/master/lib/JID.js Minimal annotation here.",188.0
