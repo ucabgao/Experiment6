@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+dbrockman/eslint-plugin-should-promised,18,d97c3b7c54d894a7022f338937c13cd0a30bc3f0,Flow,Undetectable,"Missing a predicate. Forgot to handle a case when there is an expression of an arrow function.",88.0
