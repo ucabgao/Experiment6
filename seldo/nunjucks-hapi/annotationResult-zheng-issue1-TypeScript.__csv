@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+seldo/nunjucks-hapi,1,551a79c09d0a34868be4a2d5727de4c39a68e17b,TypeScript,Detectable,"The bug was about wrong package name specified in a string literal. TypeScript can detect this bug thanks to DefinitlyTyped which provides a fully annotated module 'nunjucks'. When compiling, TypeScript cannot find the module.",302.0
