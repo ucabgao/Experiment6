@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+seldo/nunjucks-hapi,1,551a79c09d0a34868be4a2d5727de4c39a68e17b,Flow,Unknown,"In theory Flow should be able to detect this bug. But without the equivalent of DefinitlyTyped, a rather 'official' library, it is hard to decide whether it is detectable or not. We can of course construct our own version of DefinitlyTyped, but this is time-consuming and not recognized.",79.0
