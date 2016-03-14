@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+pomle/megamanjs,68,98811aeb18c00e6edeb5cdede109a1244600d3f8,TypeScript,Undetectable,"EIS. Missing functionality causes some element to be at an unexpected position.",67.0
