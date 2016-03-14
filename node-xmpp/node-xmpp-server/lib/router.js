@@ -1,13 +1,38 @@
+/* @flow */
+
 'use strict';
+
+class J {
+    constructor(a,b,c) { 
+      this._local = null
+      this.user = null // DEPRECATED
+      this._domain = null
+      this._resource = null
+
+  if (a && (!b) && (!c)) {
+    this.parseJID(a)
+  } else if (b) {
+    this.setLocal(a)
+    this.setDomain(b)
+    this.setResource(c)
+  } else {
+    throw new Error('Argument error')
+  }
+    }
+}
+
 
 var net = require('net')
   , Server = require('./server')
-  , JID = require('node-xmpp-core').JID
+//  , JID = require('node-xmpp-core').JID
+  , JID:J
   , ltx = require('ltx')
   , StreamShaper = require('./stream_shaper')
   , IdleTimeout = require('./idle_timeout')
   , EventEmitter = require('events').EventEmitter
   , util = require('util')
+
+
 
 var nameprep
 try {

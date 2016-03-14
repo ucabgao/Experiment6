@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+node-xmpp/node-xmpp-server,15,e79a53edcca17bb7f92dce90a7b531e665627a26,Flow,Detectable,"Documentation: https://github.com/node-xmpp/JID/blob/master/lib/JID.js . I am short of time to fully annotate the program. Instead, I am using a trick here.",576.0
