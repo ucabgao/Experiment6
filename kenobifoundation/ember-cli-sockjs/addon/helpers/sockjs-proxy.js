@@ -1,3 +1,5 @@
+/* @flow */
+
 import Ember from 'ember';
 import SockJSClient from 'sockjs';
 
@@ -5,6 +7,10 @@ var events  = ['close', 'error', 'message', 'open'];
 var filter  = Ember.EnumerableUtils.filter;
 var indexOf = Ember.EnumerableUtils.indexOf;
 var forEach = Ember.EnumerableUtils.forEach;
+
+class e {
+    currentTarget:?Object;
+}
 
 export default Ember.ObjectProxy.extend({
   /*
@@ -78,7 +84,7 @@ export default Ember.ObjectProxy.extend({
     var self = this;
 
     forEach(events, eventName => {
-      this.socket['on' + eventName] = event => {
+      this.socket['on' + eventName] = (event:e) => {
         Ember.run(() => {
           var activeListeners = filter(self.listeners, listener => {
             return listener.url === event.currentTarget.url && listener.type === eventName;
