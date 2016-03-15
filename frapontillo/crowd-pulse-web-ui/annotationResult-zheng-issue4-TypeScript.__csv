@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+frapontillo/crowd-pulse-web-ui,4,f3425f170c5ab469aa6f03f3b94cb76aec0a4cfa,TypeScript,Undetectable,"EIS. Wrongly implement the functionality of downloading configuration file.",282.0
