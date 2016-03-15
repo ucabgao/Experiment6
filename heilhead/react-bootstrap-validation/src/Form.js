@@ -1,3 +1,5 @@
+/* @flow */
+
 import React from 'react';
 import InputContainer from './InputContainer';
 import ValidatedInput from './ValidatedInput';
@@ -14,6 +16,12 @@ function getInputErrorMessage(input, ruleName) {
     } else {
         return errorHelp;
     }
+}
+
+class t {
+_registerInput  : any;
+_unregisterInput: any;
+defaultChecked  : boolean;
 }
 
 export default class Form extends InputContainer {
@@ -85,7 +93,7 @@ export default class Form extends InputContainer {
                     throw new Error('Can not add input without "name" attribute');
                 }
 
-                let newProps = {
+                let newProps:t = {
                     _registerInput  : this.registerInput.bind(this),
                     _unregisterInput: this.unregisterInput.bind(this)
                 };
@@ -101,7 +109,7 @@ export default class Form extends InputContainer {
                     return origCallback && origCallback(e);
                 };
 
-                let defaultValue = this.props.model && this.props.model[name];
+                let defaultValue:?(Object | boolean) = this.props.model && this.props.model[name];
 
                 if (child.props.type === 'checkbox') {
                     newProps.defaultChecked = defaultValue;

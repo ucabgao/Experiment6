@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+heilhead/react-bootstrap-validation,13,777e9354f903f60b497fd76124b47c710aced84b,Flow,Unknown,"Seems like can be potentially caught by these two type systems. But require a deep dive.",681.0
