@@ -1,3 +1,5 @@
+/* @flow */
+
 /* Copyright (c) 2012-2015 LevelUP contributors
  * See list at <https://github.com/level/levelup#contributing>
  * MIT License
@@ -55,7 +57,7 @@ function getLevelDOWN () {
   }
 }
 
-function dispatchError (levelup, error, callback) {
+function dispatchError (levelup, error, callback):void {
   return typeof callback == 'function'
     ? callback(error)
     : levelup.emit('error', error)
