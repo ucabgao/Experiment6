@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+skritter/skritter-html5,366,f850ff5f483cbe37c898d359fe1bc6b2205520b1,TypeScript,Undetectable,"EIS. Wrong construction of audio's url. ",104.0
