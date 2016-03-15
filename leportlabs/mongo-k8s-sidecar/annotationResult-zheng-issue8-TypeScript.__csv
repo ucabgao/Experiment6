@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+leportlabs/mongo-k8s-sidecar,8,9b5657e6543e1a5d21fc093a5cd788799d27cbe9,TypeScript,Undetectable,"EIS. The several seconds that are needed to promote a Secondary node to Primary results in duplicated entries.",77.0
