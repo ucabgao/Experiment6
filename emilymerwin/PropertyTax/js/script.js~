@@ -1,4 +1,3 @@
-// @flow
 (function() {
 	$('#map').load('assets/metrozips.svg', null, function(data) {
 		$.ajax({
