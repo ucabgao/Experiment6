@@ -83,7 +83,7 @@ export default Ember.ObjectProxy.extend({
     var self = this;
 
     forEach(events, eventName => {
-      this.socket['on' + eventName] = (event:a) => {
+      this.socket['on' + eventName] = event:a => {
         Ember.run(() => {
           var activeListeners = filter(self.listeners, listener => {
             return listener.url === event.currentTarget.url && listener.type === eventName;

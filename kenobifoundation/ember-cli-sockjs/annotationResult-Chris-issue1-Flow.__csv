@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+kenobifoundation/ember-cli-sockjs,1,16d95b0cb2f33abc977484fadc34094da40a7668,Flow,Detectable,"flow catches it with a simple annotation",770.0
