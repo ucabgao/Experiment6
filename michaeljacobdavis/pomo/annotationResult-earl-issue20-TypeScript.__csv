@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+michaeljacobdavis/pomo,20,9cb2e19f6ec7309911778b3713170734610f8d4e,TypeScript,Undetectable,"EIS:  Add logic and new state to fix timer handling.",7.0
