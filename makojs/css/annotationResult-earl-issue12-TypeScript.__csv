@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+makojs/css,12,43ac1008efb3672e47cbd32b0b4150d21ca7ca00,TypeScript,Undetectable,"REGEX.  Failure to properly extract subcomponent of url.",6.0
