@@ -1,4 +1,3 @@
-//@flow
 define(['jquery', 'underscore', 'backbone', 'handlebars', 'text!/static/templates/timeline.hbs', 'collections/reports', 'collections/agents', 'models/timespot', 'common', 'utils', 'toastr', 'jquery.plot', 'jquery.plot.crosshair',
     'jquery.plot.time'],
     function ($, _, Backbone, Handlebars, timelineTemplate, Reports, agents, TimeSpot, common, utils, toastr) {
