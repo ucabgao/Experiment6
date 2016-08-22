@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+newyork-anthonyng/Ear_Roulette,17,bbb8e6cd20c18476868cb896019d7f64ddb65f52,Flow,Undetectable,"EIS - clearing things out on logout.  no type error.",106.0
