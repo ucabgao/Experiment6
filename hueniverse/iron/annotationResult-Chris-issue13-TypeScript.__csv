@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+hueniverse/iron,13,60ac6d3f7a340aa8fca78611176b2b1cb019db01,TypeScript,Undetectable,"missing predicate - updating to use Hoek.nextTick and also making sure password has only alphanumeric characters. no type error.",186.0
