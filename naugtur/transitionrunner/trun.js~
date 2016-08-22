@@ -5,7 +5,6 @@ interface a {
 	setAttribute(c:any,d:any):any;
 	removeAttribute(e:any):any;
 	style:any;
-	[f:any]:any;
 }
 
 var animate = (function(){
