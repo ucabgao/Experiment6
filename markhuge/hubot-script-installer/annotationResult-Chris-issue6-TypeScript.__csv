@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+markhuge/hubot-script-installer,6,ab9e443d29aa67736be8f6727aae856b8892d316,TypeScript,Undetectable,"EIS - use path.join instead of just appending and change methods to handle a pathToPackageJson call.  this is added to both caller and callee, so no type error. typescript didn't find anything related to these issues.",278.0
