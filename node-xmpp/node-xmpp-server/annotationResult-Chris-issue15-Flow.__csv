@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+node-xmpp/node-xmpp-server,15,e79a53edcca17bb7f92dce90a7b531e665627a26,Flow,Detectable,"Added a simple annotation to JID and flow finds the error.",67.0
