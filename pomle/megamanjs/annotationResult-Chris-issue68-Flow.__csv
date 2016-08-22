@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+pomle/megamanjs,68,98811aeb18c00e6edeb5cdede109a1244600d3f8,Flow,Undetectable,"EIS - fixes movement when on a ladder.  no type error.",55.0
