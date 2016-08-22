@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+seldo/nunjucks-hapi,1,551a79c09d0a34868be4a2d5727de4c39a68e17b,Flow,Undetectable,"Other: fix typo in project name.",14.0
