@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+naugtur/transitionrunner,1,2be2012c86a13d6bdc666b041611bf15afb0eb9a,TypeScript,Undetectable,"type error - but I can't get typescript to acknowledge that adding a string to a value that is possible null is an error.",176.0
