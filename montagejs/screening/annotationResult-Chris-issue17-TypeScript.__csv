@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+montagejs/screening,17,8bb13026d9473812247935e4b6a15d8a0b5d6356,TypeScript,Undetectable,"incomplete predicate - didn't check for all relevant status codes.  not a type error.",60.0
