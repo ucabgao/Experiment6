@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+DBCDK/dbc-node-serviceprovider,11,63572d92c5d595a3559d1f87d215410a7b75c8ba,Flow,Undetectable,"Other:  Trailing comma in associative array passed in as a parameter.  Apparently, this is problematic in IE.",8.0
