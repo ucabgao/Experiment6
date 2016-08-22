@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+thewei/react-native-store,11,3e07c0399403d9beb6af227a66b8fddbc0759b39,Flow,Undetectable,"EIS - this is a little assign by value instead of assign by reference mistake.  Totally made me laugh 'cause I've done it too!  No type error.",98.0
