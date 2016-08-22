@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+seldo/nunjucks-hapi,1,551a79c09d0a34868be4a2d5727de4c39a68e17b,TypeScript,Detectable,"Added a definition for the nunjucks module that is empty.  typescript complains of the error and the error goes away when I make the fix in the fixing commit.  to ellicit the failure, must run "tsc --strictnullchecks index.ts nunjucks.ts"",463.0
