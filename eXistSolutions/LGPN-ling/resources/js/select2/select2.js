@@ -1,30 +1,22 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
 /*global $, window, document */
-
 var autocompletes = {};
 var ontology_autocompletes = {};
-
 function _formatResult(term, container, query) {
     var markup = '';
-
     markup += "<table>";
     markup += "<tr>";
     markup += "<td>" + term.id + "</td>";
     markup += "<td>" + term.value + "</td>";
     markup += "<tr>";
     markup += "</table>";
-
     return markup;
 }
-
-
 function _termFormatSelection(term) {
     "use strict";
     return term.value;
 }
-
 function destroyAutocompletes() {
-    
     console.log(autocompletes);
     "use strict";
     var key;
@@ -36,12 +28,9 @@ function destroyAutocompletes() {
             }
         }
     }
-
     autocompletes = {};
 }
-
 function destroyOntologyAutocompletes() {
-    
     console.log(ontology_autocompletes);
     "use strict";
     var key;
@@ -53,11 +42,8 @@ function destroyOntologyAutocompletes() {
             }
         }
     }
-
     ontology_autocompletes = {};
 }
-
-
 function clearAndInitAutocompletes() {
     "use strict";
     destroyAutocompletes();
@@ -65,16 +51,12 @@ function clearAndInitAutocompletes() {
     destroyOntologyAutocompletes();
     initOntologyAutocompletes();
 }
-
-
 function initAutocompletes() {
     "use strict";
     $("input[data-function='autocomplete']").each(function () {
         var autocomplete = $(this);
         var xformsID = autocomplete.prev('.xfInput').attr('id');
-
-        
-        if(xformsID !== undefined) {
+        if (xformsID !== undefined) {
             autocomplete.select2({
                 handler: undefined,
                 name: meanings,
@@ -86,7 +68,7 @@ function initAutocompletes() {
                 dropdownCssClass: "bigdrop",
                 allowClear: true,
                 createSearchChoice: function (term) {
-                    return {"id": "-1", "value": "Add new entry."};
+                    return { "id": "-1", "value": "Add new entry." };
                 },
                 id: function (object) {
                     return object.id;
@@ -109,13 +91,13 @@ function initAutocompletes() {
                     results: function (data, page) {
                         var more = (page * 10) < data.total;
                         if (parseInt(data.total, 10) === 0) {
-                            return {results: []};
+                            return { results: [] };
                         }
-
                         if (Array.isArray(data.term)) {
-                            return {results: data.term, more: more};
-                        } else {
-                            return {results: [data.term], more: more};
+                            return { results: data.term, more: more };
+                        }
+                        else {
+                            return { results: [data.term], more: more };
                         }
                     }
                 }
@@ -123,8 +105,9 @@ function initAutocompletes() {
                 if ("" === e.val) {
                     fluxProcessor.dispatchEventType(xformsID, 'autocomplete-callback', {
                         termValue: ''
-                    })
-                } else {
+                    });
+                }
+                else {
                     object = null;
                     if (e.added !== undefined) {
                         object = e.added;
@@ -143,15 +126,12 @@ function initAutocompletes() {
         }
     });
 }
-
 function initOntologyAutocompletes() {
     "use strict";
     $("input[data-function='ontology_autocomplete']").each(function () {
         var autocomplete = $(this);
         var xformsID = autocomplete.prev('.xfInput').attr('id');
-
-        
-        if(xformsID !== undefined) {
+        if (xformsID !== undefined) {
             autocomplete.select2({
                 handler: undefined,
                 name: meanings,
@@ -163,7 +143,7 @@ function initOntologyAutocompletes() {
                 dropdownCssClass: "bigdrop",
                 allowClear: true,
                 createSearchChoice: function (term) {
-                    return {"id": "-1", "value": "Add new entry."};
+                    return { "id": "-1", "value": "Add new entry." };
                 },
                 id: function (object) {
                     return object.id;
@@ -186,13 +166,13 @@ function initOntologyAutocompletes() {
                     results: function (data, page) {
                         var more = (page * 10) < data.total;
                         if (parseInt(data.total, 10) === 0) {
-                            return {results: []};
+                            return { results: [] };
                         }
-
                         if (Array.isArray(data.term)) {
-                            return {results: data.term, more: more};
-                        } else {
-                            return {results: [data.term], more: more};
+                            return { results: data.term, more: more };
+                        }
+                        else {
+                            return { results: [data.term], more: more };
                         }
                     }
                 }
@@ -200,8 +180,9 @@ function initOntologyAutocompletes() {
                 if ("" === e.val) {
                     fluxProcessor.dispatchEventType(xformsID, 'ontology_autocomplete-callback', {
                         termValue: ''
-                    })
-                } else {
+                    });
+                }
+                else {
                     object = null;
                     if (e.added !== undefined) {
                         object = e.added;
