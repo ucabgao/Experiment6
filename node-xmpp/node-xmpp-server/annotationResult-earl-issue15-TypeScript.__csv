@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+node-xmpp/node-xmpp-server,15,e79a53edcca17bb7f92dce90a7b531e665627a26,TypeScript,Unknown,"I can't tell why JID.JID was previously defined, but isn't now.  I could not find the definition of JID nor of node-xmpp-core, which defines it. ",5.0
