@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+ben-eb/postcss-svgo,4,46ed5b00205c163ff17145f0f3b098e50280f3bb,TypeScript,Undetectable,"exception error - since typescript and flow don't support exceptions in the type system, neither would catch this.",105.0
