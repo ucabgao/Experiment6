@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+IonicaBizau/node-statique,20,991d87c816bb31b7c691968c3b04f43e2eccb219,TypeScript,Undetectable,"EIS - no change to type info.  This just sends or logs the error.",37.0
