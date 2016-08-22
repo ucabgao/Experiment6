@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+dominictarr/rc,18,da24c5ec2ff553c3c421f250c5276772b4103d9a,TypeScript,Detectable,"added definition for join and type annotation for home to be nullable and typescript finds the error.",507.0
