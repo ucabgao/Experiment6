@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+heilhead/react-bootstrap-validation,13,777e9354f903f60b497fd76124b47c710aced84b,Flow,Undetectable,"EIS - I don't think there is a detectable error here.  I *think* the issue is that defaultValue in the first case can be null or undefined (if this.props.model doesn't have the key name) and in the second case the default value is only set if this.props.model does have name as a key.  That's not a type error at least in the typescript or flow type systems.",578.0
