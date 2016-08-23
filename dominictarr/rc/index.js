@@ -1,10 +1,11 @@
 #! /usr/bin/env node
+/* @flow */
 var cc   = require('./lib/utils')
 var join = require('path').join
 var deepExtend = require('deep-extend')
 var etc = '/etc'
 var win = process.platform === "win32"
-var home = win
+var home: ?string = win
            ? process.env.USERPROFILE
            : process.env.HOME
 
