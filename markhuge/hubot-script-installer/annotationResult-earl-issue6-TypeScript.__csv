@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+markhuge/hubot-script-installer,6,ab9e443d29aa67736be8f6727aae856b8892d316,TypeScript,Undetectable,"EIS.",6.0
