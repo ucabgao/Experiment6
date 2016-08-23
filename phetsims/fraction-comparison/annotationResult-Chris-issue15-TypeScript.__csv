@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+phetsims/fraction-comparison,15,213cc3236760739e81e0ba08d47ba73b623fe01f,TypeScript,Undetectable,"EIS - this simply updates the functions to link to update the centerX in addition to setting the text.  just adds a statement.  no type error.",7.0
