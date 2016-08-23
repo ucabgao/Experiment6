@@ -26,7 +26,7 @@ interface moduleShim {
   exports : any
 }
 
-var module = {
+var module : moduleShim = {
   exports: ""
 }
 
