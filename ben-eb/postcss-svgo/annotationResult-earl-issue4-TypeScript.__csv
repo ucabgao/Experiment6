@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+ben-eb/postcss-svgo,4,46ed5b00205c163ff17145f0f3b098e50280f3bb,TypeScript,Undetectable,"EIS:  Correctly handle errors decoding URLs.",5.0
