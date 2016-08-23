@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+brehaut/color-js,3,f8bd3fc8dff53306f7411a6214cd7653512b0a80,Flow,Undetectable,"EIS:  Fix lightening and darkening.",5.0
