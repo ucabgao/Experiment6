@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+kenobifoundation/ember-cli-sockjs,1,16d95b0cb2f33abc977484fadc34094da40a7668,TypeScript,Unknown,"Ran out of time importing the modules needed in order to get TS to analyze the relevant line and discover that event could be undefined.",607.0
