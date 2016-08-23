@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+emilymerwin/PropertyTax,1,38928bfab748ee0be16c2b2f0896ae899dba3476,TypeScript,Undetectable,"Other:  multiplatform API differences.",27.0
