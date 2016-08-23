@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+kenobifoundation/ember-cli-sockjs,1,16d95b0cb2f33abc977484fadc34094da40a7668,Flow,Unknown,"Unable to create shim for Ember within the 10m time bound.",712.0

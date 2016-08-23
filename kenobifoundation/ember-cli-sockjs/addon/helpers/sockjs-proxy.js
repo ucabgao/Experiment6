@@ -1,5 +1,35 @@
-import Ember from 'ember';
-import SockJSClient from 'sockjs';
+/* @flow */
+
+interface EnumerableUtilsShim {
+    filter : any,
+    indexOf : any,
+    forEach : any
+}
+
+interface emberShim {
+  EnumerablesUtils : EnumerableUtilsShim,
+  ObjectProxy : any,
+  typeOf(context : any) : any,
+  run(f : () => any) : any,
+  assert(s:string,y:any) : any,
+  makeArray() : any
+}
+
+var Ember: emberShim = {
+  EnumerableUtils: {
+    filter: "",
+    indexOf: "",
+    forEach: ""
+  },
+  ObjectProxy: "",
+  typeOf: function(context:any) : any,
+  run: function() : any,
+  assert: function(s:string, y:any) : any,
+  makeArray: run: function() : any
+}
+
+; //import Ember from 'ember';
+var SockJSClient: any; //import SockJSClient from 'sockjs';
 
 var events  = ['close', 'error', 'message', 'open'];
 var filter  = Ember.EnumerableUtils.filter;
