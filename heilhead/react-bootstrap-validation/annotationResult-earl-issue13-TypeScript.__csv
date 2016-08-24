@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+heilhead/react-bootstrap-validation,13,777e9354f903f60b497fd76124b47c710aced84b,TypeScript,Undetectable,"Missing branch and related value to test against in that branch's predicate.",5.0
