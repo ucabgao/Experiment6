@@ -1,3 +1,4 @@
+/* @flow */
 /*
  * Copyright 2015 Francesco Pontillo
  *
