@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+Level/levelup,337,3f1814b5e74422de73ee3d93ebb1c88eb131c0fa,TypeScript,Detectable,"This is really two bugs.  I was able to show that the fact the readError is not void in lib/levelup.js quickly and decided that that was sufficient, after encountering module problems on lib/util.js.",41.0
