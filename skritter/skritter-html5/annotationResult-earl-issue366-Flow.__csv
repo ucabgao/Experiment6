@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+skritter/skritter-html5,366,f850ff5f483cbe37c898d359fe1bc6b2205520b1,Flow,Undetectable,"Wrong predicate and wrong value used.",44.0
