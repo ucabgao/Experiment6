@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+thewei/react-native-store,11,3e07c0399403d9beb6af227a66b8fddbc0759b39,Flow,Undetectable,"Wrong predicate.",62.0
