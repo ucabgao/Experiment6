@@ -1,3 +1,4 @@
+/* @flow */
 /* Copyright (c) 2012-2015 LevelUP contributors
  * See list at <https://github.com/level/levelup#contributing>
  * MIT License
@@ -184,7 +185,7 @@ function writeError (db, message, callback) {
   )
 }
 
-function readError (db, message, callback) {
+function readError (db : any, message : any, callback : any) : void {
   dispatchError(
       db
      , new ReadError(message)
