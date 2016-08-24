@@ -1,3 +1,4 @@
+/* @flow */
 var Random = require('./random'),
     Util = require('./util');
 
