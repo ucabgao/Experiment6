@@ -1,3 +1,4 @@
+/* @flow */
 var animate = (function(){
 	"use strict";
 
@@ -9,7 +10,7 @@ var animate = (function(){
 		trans  = 'transition';
 	} else {
 		for( var i = 0; i < domPrefixes.length; i++ ) {
-			if( elm.style[domPrefixes[i] + 'Transition'] !== undefined ) {
+			if( (elm.style : Object)[domPrefixes[i] + 'Transition'] !== undefined ) {
 				trans = domPrefixes[i] + 'Transition';
 				break;
 			}
@@ -26,7 +27,7 @@ var animate = (function(){
 		S.delay || (S.delay=0);
 		S.repeat || (S.repeat=1);
 
-		element.setAttribute('class',element.getAttribute('class')+' '+animationName);
+		element.setAttribute('class',( element.getAttribute('class') : ?string)+' '+animationName);
 		if(trans !== ''){
 			element.style[trans] = 'All '+S.duration+'ms linear';
 		}
